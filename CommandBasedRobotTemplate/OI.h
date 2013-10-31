@@ -12,6 +12,7 @@ public:
 	JoystickButton *button1; // Button 1 is the trigger
 	JoystickButton *button2;
 	JoystickButton *button3;
+	JoystickButton *button4;
 };
 
 #endif

@@ -2,7 +2,7 @@
 #include "../Robotmap.h"
 
 ExampleSubsystem::ExampleSubsystem() : Subsystem("ExampleSubsystem") {
-	
+	relay1 = new Relay(1);
 }
     
 void ExampleSubsystem::InitDefaultCommand() {
@@ -10,6 +10,13 @@ void ExampleSubsystem::InitDefaultCommand() {
 	//SetDefaultCommand(new MySpecialCommand());
 }
 
+void ExampleSubsystem::On() {
+	relay1->set(Relay::kOn); // Turns on some lights in the relay section
+}
+
+void ExampleSubsystem::Off() {
+	relay1->set(Relay::kOff); // Turns off some lights in the relay section
+}
 
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
