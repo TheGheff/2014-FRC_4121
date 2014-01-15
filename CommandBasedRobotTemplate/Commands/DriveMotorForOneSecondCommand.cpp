@@ -2,7 +2,7 @@
 #include "../Subsystems/MotorControlSubsystem.h"
 
 DriveMotorForOneSecondCommand::DriveMotorForOneSecondCommand() {
-	requires(MotorControlSubsystem);
+	//requires(MotorControlSubsystem)
 	timer = new Timer();
 }
 
@@ -12,7 +12,7 @@ void DriveMotorForOneSecondCommand::Initialize() {
 }
 
 void DriveMotorForOneSecondCommand::Execute() {
-	MotorControlSubsystem->Drive(.3);
+	motorcontrolsubsystem->Drive(.3);
 }
 
 bool DriveMotorForOneSecondCommand::IsFinished() {
@@ -21,10 +21,10 @@ bool DriveMotorForOneSecondCommand::IsFinished() {
 
 void DriveMotorForOneSecondCommand::End() {
 	timer->Stop();
-	MotorControlSubsystem->Drive(0);
+	motorcontrolsubsystem->Drive(0);
 }
 
 void DriveMotorForOneSecondCommand::Interrupted() {
 	timer->Stop();
-	MotorControlSubsystem->Drive(0);
+	motorcontrolsubsystem->Drive(0);
 }

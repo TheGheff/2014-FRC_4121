@@ -11,11 +11,11 @@ void ExampleSubsystem::InitDefaultCommand() {
 }
 
 void ExampleSubsystem::On() {
-	relay1->set(Relay::kOn); // Turns on some lights in the relay section
+	relay1->Set(Relay::kOn); // Turns on some lights in the relay section
 }
 
 void ExampleSubsystem::Off() {
-	relay1->set(Relay::kOff); // Turns off some lights in the relay section
+	relay1->Set(Relay::kOff); // Turns off some lights in the relay section
 }
 
 // Put methods for controlling this subsystem

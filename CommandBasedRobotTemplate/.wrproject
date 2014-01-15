@@ -246,10 +246,10 @@
     <buildtargets>
         <buildtarget buildtool="Linker" name="CommandBasedRobotTemplate" passed="false" targetname="CommandBasedRobotTemplate">
             <contents>
-                <buildtargetreference name="/CommandBasedRobotTemplate/CommandBassedRobotTemplate_partialImage"/>
+                <buildtargetreference name="/CommandBasedRobotTemplate/CommandBasedRobotTemplate_partialImage"/>
             </contents>
         </buildtarget>
-        <buildtarget buildtool="Partial Image Linker" name="CommandBassedRobotTemplate_partialImage" passed="true" targetname="CommandBassedRobotTemplate_partialImage">
+        <buildtarget buildtool="Partial Image Linker" name="CommandBasedRobotTemplate_partialImage" passed="true" targetname="CommandBasedRobotTemplate_partialImage">
             <contents>
                 <folder name="/CommandBasedRobotTemplate" recursive="true"/>
             </contents>
