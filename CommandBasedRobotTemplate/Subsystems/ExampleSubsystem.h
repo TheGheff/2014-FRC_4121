@@ -12,7 +12,7 @@ class ExampleSubsystem: public Subsystem {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
-	Relay *relay1;
+	Relay *relay1
 public:
 	ExampleSubsystem();
 	void InitDefaultCommand();

@@ -33,8 +33,8 @@ typedef enum{
 } JOYSTICE_BUTTONS_T;
 
 //######### Motors #########
-#define DRIVEMOTORRIGHT (2)
-#define DRIVEMOTORLEFT  (1)
+#define DRIVEMOTORRIGHT (1)
+#define DRIVEMOTORLEFT  (2)
 
 
 #endif
