@@ -1,7 +1,7 @@
 #include "DriveMotorCommand.h"
 
 DriveMotorCommand::DriveMotorCommand() {
-	requires(MotorControlSubsystem);
+	//requires(MotorControlSubsystem);
 }
 
 void DriveMotorCommand::Initialize() {
@@ -9,7 +9,7 @@ void DriveMotorCommand::Initialize() {
 }
 
 void DriveMotorCommand::Execute() {
-	MotorControlSubsystem->Drive(oi->joystick1->GetY()); // Gets Joystick1's Y vaule and sets it as speed for Drive command in MotorControlSubsytem.
+	motorcontrolsubsystem->Drive(oi->joystick1->GetY()); // Gets Joystick1's Y vaule and sets it as speed for Drive command in MotorControlSubsytem.
 }
 
 bool DriveMotorCommand::IsFinished() {
@@ -17,9 +17,9 @@ bool DriveMotorCommand::IsFinished() {
 }
 
 void DriveMotorCommand::End() {
-	MotorControlSubsytem->Drive(0); // Sets drive speed to 0
+	motorcontrolsubsystem->Drive(0); // Sets drive speed to 0
 }
 
 void DriveMotorCommand::Interrupted() {
-	MotorControlSubsytem->Drive(0); // Sets drive speed to 0
+	motorcontrolsubsystem->Drive(0); // Sets drive speed to 0
 }

@@ -2,7 +2,7 @@
 
 ExampleCommand::ExampleCommand() {
 	// Use requires() here to declare subsystem dependencies
-	requires(examplesubsystem);
+	//requires(examplesubsystem)
 }
 
 // Called just before this Command runs the first time
@@ -15,6 +15,8 @@ void ExampleCommand::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void ExampleCommand::Execute() {
 	printf("Execute\n");
+//	DriverStationLCD *ds = DriverStationLCD::GetInstance();
+//	ds->PrintfLine(DriverStationLCD::kUser_Line2, "Execute");
 	
 }
 
