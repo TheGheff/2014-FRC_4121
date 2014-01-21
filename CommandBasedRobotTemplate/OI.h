@@ -5,14 +5,20 @@
 
 class OI {
 private:
-
+	Joystick *driveStickL, *driveStickR;
 public:
 	OI();
-	Joystick *joystick1;
+	//Right JoyStick
+	Joystick* getDriveStickR();
 	JoystickButton *button1; // Button 1 is the trigger
-	JoystickButton *button2;
-	JoystickButton *button3;
-	JoystickButton *button4;
+	
+	//Left Joystick
+	Joystick* getDriveStickL();
+
+	JoystickButton *precisionDriveButton; // Button 2 is the down thumb button
+	JoystickButton *loaderSolenoidUp, *loaderSolenoidDown;  
+	
+	
 };
 
 #endif

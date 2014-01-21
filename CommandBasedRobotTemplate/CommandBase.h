@@ -3,7 +3,9 @@
 
 #include "Commands/Command.h"
 #include "Subsystems/ExampleSubsystem.h"
-#include "Subsystems/MotorControlSubsystem.h"
+#include "Subsystems/RelaySubsystem.h"
+#include "Subsystems/DriverStationLCDSystem.h"
+#include "Subsystems/Chassis.h"
 #include "OI.h"
 
 
@@ -19,8 +21,12 @@ public:
 	static void init();
 	// Create a single static instance of all of your subsystems
 	static ExampleSubsystem *examplesubsystem;
-	static MotorControlSubsystem *motorcontrolsubsystem;
+	static RelaySubsystem *extendRelay;
+	static RelaySubsystem *retractRelay;
+	static DriverStationLCDSystem *driverStationLCDSystem;
+	static Chassis *chassis;	
 	static OI *oi;
+	;
 };
 
 #endif
