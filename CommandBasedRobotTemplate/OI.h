@@ -17,7 +17,7 @@ public:
 
 	JoystickButton *precisionDriveButton; // Button 2 is the down thumb button
 	JoystickButton *loaderSolenoidUp, *loaderSolenoidDown;  
-	
+	JoystickButton *retractWinch, *releaseWinch;
 	
 };
 

@@ -7,7 +7,7 @@ RetractLoaderCommand::RetractLoaderCommand() {
 
 // Called just before this Command runs the first time
 void RetractLoaderCommand::Initialize() {
-	printf("Inittialize\n");
+	printf("Initialize\n");
 	SetTimeout(5);
 	//loaderRelay->On();
 }
@@ -17,10 +17,10 @@ void RetractLoaderCommand::Execute() {
 	printf("Execute\n");
 	DriverStationLCD *ds = DriverStationLCD::GetInstance();
 	ds->PrintfLine(DriverStationLCD::kUser_Line2, "Execute");
-	extendRelay->Off();
+	extendLoaderRelay->Off();
 	// ## FIX ##
 	// Consider inserting delay in here
-	retractRelay->On();	
+	retractLoaderRelay->On();	
 	
 }
 

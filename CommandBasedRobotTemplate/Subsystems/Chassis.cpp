@@ -4,13 +4,15 @@
 #include "RobotDrive.h"
 
 Chassis::Chassis() : Subsystem("Chassis") {
-	
+//This is the Chassis Constructor.	
 	frontLeftMotor = new Jaguar(DRIVEMOTORLEFT);
 	frontRightMotor = new Jaguar(DRIVEMOTORRIGHT);
 	robotDrive = new RobotDrive(frontLeftMotor, frontRightMotor);
-//	robotDrive->SetInvertedMotor(robotDrive->kFrontLeftMotor, true);
-//		robotDrive->SetInvertedMotor(robotDrive->kFrontRightMotor, true);
-//		robotDrive->SetSafetyEnabled(false);
+	
+	// Reverse the motors because they were installed backwards
+	robotDrive->SetInvertedMotor(robotDrive->kFrontLeftMotor, true);
+	robotDrive->SetInvertedMotor(robotDrive->kFrontRightMotor, true);
+	robotDrive->SetSafetyEnabled(false);
 	
 	// Create the DigitalOutput objects for the brake/coast header control system
 //	rightFrontBrake = new DigitalOutput(DIGITAL_MODULE_RIGHT,3);
@@ -20,10 +22,6 @@ Chassis::Chassis() : Subsystem("Chassis") {
 void Chassis::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
 	//SetDefaultCommand(new MySpecialCommand());
-	robotDrive->SetInvertedMotor(robotDrive->kFrontLeftMotor, true);
-	robotDrive->SetInvertedMotor(robotDrive->kFrontRightMotor, true);
-	robotDrive->SetSafetyEnabled(false);
-	
 	SetDefaultCommand(new DriveWithJoystick());
 }
 
@@ -31,11 +29,16 @@ void Chassis::InitDefaultCommand() {
 // here. Call these from Commands.
 
 void Chassis::driveWithJoystick(Joystick *stickL, Joystick *stickR) {
-	robotDrive->TankDrive(stickL, stickR, TRUE);
-	
+	//Purpose:
+		//Using the driver station joysticks to drive the robot.	
+	//Inputs:   Are Instances of the Joystick class.
+	robotDrive->TankDrive(stickL, stickR, TRUE);	
 }
 
 void Chassis::autoDriveSystem(float left, float right) {
+	// Purpose:
+		//To drive the Robot in autounomous mode.
+	//Inputs: left,right - takes a floating point value from -1 to 1, with 1 indicating full speed and .5 half speed.
 	robotDrive->TankDrive(left, right);
 }
 

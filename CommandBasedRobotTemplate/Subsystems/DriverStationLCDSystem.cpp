@@ -15,7 +15,7 @@ void DriverStationLCDSystem::InitDefaultCommand() {
 // here. Call these from Commands.
 
 void DriverStationLCDSystem::ClearLCD(void) {		
-	dsLCD->PrintfLine(DriverStationLCD::kMain_Line6, "F.I.R.E. Team #0322");
+	dsLCD->PrintfLine(DriverStationLCD::kMain_Line6, "wooo! Team #4121");
 	dsLCD->PrintfLine(DriverStationLCD::kUser_Line1, "");
 	dsLCD->PrintfLine(DriverStationLCD::kUser_Line2, "");
 	dsLCD->PrintfLine(DriverStationLCD::kUser_Line3, "");
@@ -27,7 +27,7 @@ void DriverStationLCDSystem::ClearLCD(void) {
 
 void DriverStationLCDSystem::UpdateLCD(int type, Gyro* gyro, Encoder* leftEncoder,
 		Encoder* rightEncoder, ADXL345_I2C* accel) {	
-	dsLCD->PrintfLine(DriverStationLCD::kMain_Line6, "F.I.R.E. Team #0322");
+	dsLCD->PrintfLine(DriverStationLCD::kMain_Line6, ",Team #4121!");
 	switch(type) {
 		default:
 			dsLCD->PrintfLine(DriverStationLCD::kUser_Line1, "Gyro Angle: %7.3f", gyro->GetAngle());
@@ -36,7 +36,8 @@ void DriverStationLCDSystem::UpdateLCD(int type, Gyro* gyro, Encoder* leftEncode
 			dsLCD->PrintfLine(DriverStationLCD::kUser_Line4, "X-Axis Acc = %f", accel->GetAcceleration(accel->kAxis_X));
 			dsLCD->PrintfLine(DriverStationLCD::kUser_Line5, "Y-Axis Acc = %f", accel->GetAcceleration(accel->kAxis_Y));
 			dsLCD->PrintfLine(DriverStationLCD::kUser_Line6, "Z-Axis Acc = %f", accel->GetAcceleration(accel->kAxis_Z));
-			dsLCD->UpdateLCD();
+			
 		break;
 	}
+	dsLCD->UpdateLCD();
 }

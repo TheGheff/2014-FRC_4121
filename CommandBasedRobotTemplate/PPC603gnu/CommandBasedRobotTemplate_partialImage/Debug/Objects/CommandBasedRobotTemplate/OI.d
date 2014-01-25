@@ -394,11 +394,13 @@
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/RelaySubsystem.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/DriverStationLCDSystem.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/WinchSubsystem.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/Chassis.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../OI.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/PrecisionDrive.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ExtendLoaderCommand.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/RetractLoaderCommand.h
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/RetractLoaderCommand.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/PullBackWinch.h
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/OI.h:
 
@@ -1186,6 +1188,8 @@ C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/RelaySub
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/DriverStationLCDSystem.h:
 
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/WinchSubsystem.h:
+
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/Chassis.h:
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../OI.h:
@@ -1195,3 +1199,5 @@ C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/PrecisionDrive.h:
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ExtendLoaderCommand.h:
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/RetractLoaderCommand.h:
+
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/PullBackWinch.h:

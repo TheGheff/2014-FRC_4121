@@ -13,13 +13,13 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 	RobotDrive *robotDrive;
-	Jaguar *frontLeftMotor, *frontRightMotor;
+	Jaguar *frontLeftMotor, *frontRightMotor, *winchMotor, *feederMotor;
 	//DigitalOutput *leftFrontBrake, *leftRearBrake, *rightFrontBrake, *rightRearBrake;	
 public:
 	Chassis();
 	void InitDefaultCommand();
 	void autoDriveSystem(float, float);
-	void Chassis::driveWithJoystick(Joystick *stickL, Joystick *stickR);
+	void driveWithJoystick(Joystick *stickL, Joystick *stickR);
 	void precisionDriveSystem(Joystick *stickL, Joystick *stickR);
 	//void brake();
 	//void coast();

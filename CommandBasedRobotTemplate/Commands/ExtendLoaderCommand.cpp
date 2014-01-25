@@ -7,7 +7,7 @@ ExtendLoaderCommand::ExtendLoaderCommand() {
 
 // Called just before this Command runs the first time
 void ExtendLoaderCommand::Initialize() {
-	printf("Inittialize\n");
+	printf("Initialize\n");
 	SetTimeout(5);
 	//loaderRelay->On();
 }
@@ -17,10 +17,10 @@ void ExtendLoaderCommand::Execute() {
 	printf("Execute\n");
 	DriverStationLCD *ds = DriverStationLCD::GetInstance();
 	ds->PrintfLine(DriverStationLCD::kUser_Line2, "Execute");
-	retractRelay->Off();
+	retractLoaderRelay->Off();
 	// ## FIX ##
 	// Consider inserting delay in here
-	extendRelay->On();	
+	extendLoaderRelay->On();	
 	
 }
 

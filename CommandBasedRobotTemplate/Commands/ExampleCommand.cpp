@@ -7,7 +7,7 @@ ExampleCommand::ExampleCommand() {
 
 // Called just before this Command runs the first time
 void ExampleCommand::Initialize() {
-	printf("Inittialize\n");
+	printf("Initialize\n");
 	SetTimeout(5);
 	examplesubsystem->On();
 }

@@ -45,6 +45,23 @@ typedef enum{
 //######### Motors #########
 #define DRIVEMOTORRIGHT (2)
 #define DRIVEMOTORLEFT  (1)
+#define WINCHMOTOR		(3)
+#define FEEDERMOTOR 	(4)
+
+typedef enum{
+	ENGAGE_WINCH = 1,
+	DISENGAGE_WINCH,
+	RELAY_3,
+	EXTEND_LOADER_RELAY,
+	RETRACT_LOADER_RELAY,
+	RELAY_6,
+	RELAY_7,
+	RELAY_8,
+
+	
+	
+}RELAY_T;
+
 
 
 #endif
