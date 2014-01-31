@@ -14,13 +14,16 @@ private:
 	// for methods that implement subsystem capabilities
 	RobotDrive *robotDrive;
 	Jaguar *frontLeftMotor, *frontRightMotor, *winchMotor, *feederMotor;
+	bool DriveState;
 	//DigitalOutput *leftFrontBrake, *leftRearBrake, *rightFrontBrake, *rightRearBrake;	
 public:
 	Chassis();
 	void InitDefaultCommand();
 	void autoDriveSystem(float, float);
 	void driveWithJoystick(Joystick *stickL, Joystick *stickR);
-	void precisionDriveSystem(Joystick *stickL, Joystick *stickR);
+	//void precisionDriveSystem(Joystick *stickL, Joystick *stickR);
+	void ToggleDrive(bool DriveState);
+
 	//void brake();
 	//void coast();
 };

@@ -13,6 +13,7 @@ Chassis::Chassis() : Subsystem("Chassis") {
 	robotDrive->SetInvertedMotor(robotDrive->kFrontLeftMotor, true);
 	robotDrive->SetInvertedMotor(robotDrive->kFrontRightMotor, true);
 	robotDrive->SetSafetyEnabled(false);
+	DriveState=false;
 	
 	// Create the DigitalOutput objects for the brake/coast header control system
 //	rightFrontBrake = new DigitalOutput(DIGITAL_MODULE_RIGHT,3);
@@ -32,7 +33,18 @@ void Chassis::driveWithJoystick(Joystick *stickL, Joystick *stickR) {
 	//Purpose:
 		//Using the driver station joysticks to drive the robot.	
 	//Inputs:   Are Instances of the Joystick class.
-	robotDrive->TankDrive(stickL, stickR, TRUE);	
+	
+	//true precision drive
+	//false standard drive
+	
+	if (DriveState)
+	{
+		robotDrive->TankDrive(stickL, stickR,  TRUE);	
+	}
+	else
+	{
+		robotDrive->TankDrive(stickL, stickR,  FALSE);	
+	}
 }
 
 void Chassis::autoDriveSystem(float left, float right) {
@@ -42,9 +54,14 @@ void Chassis::autoDriveSystem(float left, float right) {
 	robotDrive->TankDrive(left, right);
 }
 
-void Chassis::precisionDriveSystem(Joystick *stickL, Joystick *stickR) {
-	robotDrive->TankDrive(stickL, stickR, FALSE);
+
+void Chassis::ToggleDrive(bool DriveState){
+	DriveState = ~DriveState;
+	
+	//true precision drive
+	//false standard drive
 }
+
 
 //void Chassis::brake() {
 ////	leftFrontBrake->Set(1);

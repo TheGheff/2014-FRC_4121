@@ -400,7 +400,8 @@
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/PrecisionDrive.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ExtendLoaderCommand.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/RetractLoaderCommand.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/PullBackWinch.h
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/PullBackWinch.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ToggleDrive.h
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/OI.h:
 
@@ -1201,3 +1202,5 @@ C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ExtendLoaderCommand.h:
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/RetractLoaderCommand.h:
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/PullBackWinch.h:
+
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ToggleDrive.h:

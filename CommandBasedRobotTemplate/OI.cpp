@@ -5,6 +5,7 @@
 #include "Commands/ExtendLoaderCommand.h"
 #include "Commands/RetractLoaderCommand.h"
 #include "Commands/PullBackWinch.h"
+#include "Commands/ToggleDrive.h"
 
 OI::OI() {
 	// Process operator interface input here.
@@ -26,7 +27,7 @@ OI::OI() {
 	
 	//Precision Drive
 	precisionDriveButton = new JoystickButton(driveStickL, THUMB_BUTTON_DOWN);
-	precisionDriveButton->ToggleWhenPressed(new PrecisionDrive());
+	precisionDriveButton->ToggleWhenPressed(new ToggleDrive());
 	
 	//Loader Solenoid
 	loaderSolenoidUp = new JoystickButton(driveStickL, LEFT_SIDE_UP);
