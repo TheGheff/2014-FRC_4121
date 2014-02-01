@@ -27,7 +27,7 @@ OI::OI() {
 	
 	//Precision Drive
 	precisionDriveButton = new JoystickButton(driveStickL, THUMB_BUTTON_DOWN);
-	precisionDriveButton->ToggleWhenPressed(new ToggleDrive());
+	precisionDriveButton->ToggleWhenPressed(new cmdToggleDrive());
 	
 	//Loader Solenoid
 	loaderSolenoidUp = new JoystickButton(driveStickL, LEFT_SIDE_UP);
