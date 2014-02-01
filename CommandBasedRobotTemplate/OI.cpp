@@ -24,13 +24,13 @@ OI::OI() {
 	releaseWinch->WhenPressed(new RetractLoaderCommand());
 	
 	//Winch Hold Limit Switch
-	retractHoldWinch = new DigitalInput(WINCH_RETRACT_LIMIT_SWITCH_I);
-	retractHoldWinch->SetUpSourceEdge(TRUE, FALSE);
+//	retractHoldWinch = new DigitalInput(WINCH_RETRACT_LIMIT_SWITCH_I);
+//	retractHoldWinch->SetUpSourceEdge(TRUE, FALSE);
 	
 	
 	
 	
-	Timer babyPuncher = new Timer();
+	//Timer babyPuncher = new Timer();
 
 	//Left Joystick
 	driveStickL = new Joystick(JOYSTICKLEFT);

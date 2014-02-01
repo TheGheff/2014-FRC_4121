@@ -7,6 +7,7 @@ WinchSubsystem::WinchSubsystem() : Subsystem("WinchSubsystem") {
 	relay2 = new Relay(DISENGAGE_WINCH);
 	winchMotor = new Jaguar(WINCHMOTOR);
 	feederMotor = new Jaguar(FEEDERMOTOR);
+	retractLimitSwitch = new DigitalInput(WINCH_RETRACT_LIMIT_SWITCH_I);
 	
 }
     
@@ -39,6 +40,10 @@ void WinchSubsystem::StopEverything(){
 	relay1->Set(Relay::kOff); //stops the pulling back of and the releasing of the winch
 	relay2->Set(Relay::kOff);
 	winchMotor->SetSpeed(0);//winch motor stops running
+}
+
+bool WinchSubsystem::ReadLimitSwitch(){
+	return retractLimitSwitch->Get();
 }
 // Put methods for controlling this subsystem
 // here. Call these from Commands.

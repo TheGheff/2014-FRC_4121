@@ -14,6 +14,7 @@ private:
 	// for methods that implement subsystem capabilities
 	Relay *relay1, *relay2;
 	Jaguar *winchMotor, *feederMotor;
+	DigitalInput *retractLimitSwitch;
 public:
 	WinchSubsystem();
 	void InitDefaultCommand();
@@ -21,6 +22,7 @@ public:
 	void RetractHold();
 	void Release();
 	void StopEverything();
+	bool ReadLimitSwitch();
 	
 };
 
