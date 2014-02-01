@@ -62,6 +62,15 @@ typedef enum{
 	
 }RELAY_T;
 
-
+typedef enum{
+	WINCH_RETRACT_LIMIT_SWITCH_I = 1,
+	DIO2,
+	DIO3,
+	DIO4,
+	DIO5,
+	DIO6,
+	DIO7,
+	DIO8
+}DIGITAL_IO_T;
 
 #endif
