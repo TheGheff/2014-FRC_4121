@@ -22,7 +22,7 @@ public:
 	void autoDriveSystem(float, float);
 	void driveWithJoystick(Joystick *stickL, Joystick *stickR);
 	//void precisionDriveSystem(Joystick *stickL, Joystick *stickR);
-	void ToggleDrive(bool DriveState);
+	void ToggleDrive();
 
 	//void brake();
 	//void coast();
