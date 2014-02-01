@@ -18,7 +18,10 @@ public:
 	WinchSubsystem();
 	void InitDefaultCommand();
 	void Retract();
+	void RetractHold();
 	void Release();
+	void StopEverything();
+	
 };
 
 #endif
