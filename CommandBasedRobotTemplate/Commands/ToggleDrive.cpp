@@ -3,7 +3,7 @@
 ToggleDrive::ToggleDrive() {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
-	//Requires(chassis);
+	Requires(chassis);
 }
 
 // Called just before this Command runs the first time
@@ -12,7 +12,7 @@ void ToggleDrive::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ToggleDrive::Execute() {
-	chassis->driveWithJoystick(oi->getDriveStickL(), oi->getDriveStickR());
+	chassis->ToggleDrive();//driveWithJoystick(oi->getDriveStickL(), oi->getDriveStickR());
 }
 
 // Make this return true when this Command no longer needs to run execute()
