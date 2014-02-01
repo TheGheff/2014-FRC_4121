@@ -1,4 +1,3 @@
-
 #ifndef TOGGLE_DRIVE_H
 #define TOGGLE_DRIVE_H
 
@@ -9,9 +8,9 @@
  *
  * @author 322Programmer
  */
-class ToggleDrive: public CommandBase {
+class cmdToggleDrive: public CommandBase {
 public:
-	ToggleDrive();
+	cmdToggleDrive();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
