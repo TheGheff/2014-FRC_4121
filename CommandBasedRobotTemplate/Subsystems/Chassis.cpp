@@ -55,24 +55,10 @@ void Chassis::autoDriveSystem(float left, float right) {
 }
 
 
-void Chassis::ToggleDrive(bool DriveState){
+void Chassis::ToggleDrive){
 	DriveState = ~DriveState;
-	
 	//true precision drive
 	//false standard drive
 }
 
 
-//void Chassis::brake() {
-////	leftFrontBrake->Set(1);
-////	rightFrontBrake->Set(1);
-////	leftRearBrake->Set(1);
-////	rightRearBrake->Set(1);
-//}
-
-//void Chassis::coast() {
-////	leftFrontBrake->Set(0);
-////	rightFrontBrake->Set(0);
-////	leftRearBrake->Set(0);
-////	rightRearBrake->Set(0);
-//}
