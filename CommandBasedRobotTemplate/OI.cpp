@@ -1,11 +1,13 @@
 #include "OI.h"
 #include "Robotmap.h"
+#include <DigitalInput.h>
 #include "Commands/ExampleCommand.h"
 #include "Commands/PrecisionDrive.h"
 #include "Commands/ExtendLoaderCommand.h"
 #include "Commands/RetractLoaderCommand.h"
 #include "Commands/PullBackWinch.h"
 #include "Commands/ToggleDrive.h"
+
 
 OI::OI() {
 	// Process operator interface input here.
@@ -20,7 +22,15 @@ OI::OI() {
 	retractWinch->WhenPressed(new PullBackWinch());
 	releaseWinch = new JoystickButton(driveStickR, THUMB_BUTTON_UP);
 	releaseWinch->WhenPressed(new RetractLoaderCommand());
-	//Timer babyPuncher = new Timer();
+	
+	//Winch Hold Limit Switch
+	retractHoldWinch = new DigitalInput(WINCH_RETRACT_LIMIT_SWITCH_I);
+	retractHoldWinch->SetUpSourceEdge(TRUE, FALSE);
+	
+	
+	
+	
+	Timer babyPuncher = new Timer();
 
 	//Left Joystick
 	driveStickL = new Joystick(JOYSTICKLEFT);
