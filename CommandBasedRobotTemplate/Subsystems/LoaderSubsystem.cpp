@@ -3,6 +3,7 @@
 
 LoaderSubsystem:: LoaderSubsystem () : Subsystem("LoaderSubsystem") 
 {
+	//this is the loadersubsystem constructor
 	extendSolenoid = new Relay(ENGAGE_SOLENOID);
 	retractSolenoid = new Relay(DISENGAGE_SOLENOID);
 	feederMotor = new Jaguar(FEEDERMOTOR);
