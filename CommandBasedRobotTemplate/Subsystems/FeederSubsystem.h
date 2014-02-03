@@ -9,7 +9,7 @@ private:
 	// for methods that implement subsystem capabilities
 	
 	Jaguar *feederMotor;
-	Relay  *leftSolenoid, *rightSolenoid;
+	Relay  *extendSolenoid, *retractSolenoid;
 	
 	
 public:
