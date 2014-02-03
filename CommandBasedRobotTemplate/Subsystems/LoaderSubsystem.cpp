@@ -3,8 +3,8 @@
 
 LoaderSubsystem:: LoaderSubsystem () : Subsystem("LoaderSubsystem") 
 {
-	extendSolenoid = new Relay(ENGAGE_SOLENOIDS);
-	retractSolenoid = new Relay(DISENGAGE_SOLENOIDS);
+	extendSolenoid = new Relay(ENGAGE_SOLENOID);
+	retractSolenoid = new Relay(DISENGAGE_SOLENOID);
 	feederMotor = new Jaguar(FEEDERMOTOR);
 }
     
