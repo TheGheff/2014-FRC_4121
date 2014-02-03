@@ -20,6 +20,7 @@ WinchSubsystem* CommandBase::winchSubsystem = NULL;
 RelaySubsystem* CommandBase::extendLoaderRelay = NULL;
 RelaySubsystem* CommandBase::retractLoaderRelay = NULL;
 DriverStationLCDSystem* CommandBase::driverStationLCDSystem = NULL;
+LoaderSubsystem* CommandBase::loaderSubsystem = NULL;
 Chassis* CommandBase::chassis = NULL;
 OI* CommandBase::oi = NULL;
 
@@ -31,6 +32,7 @@ void CommandBase::init() {
 	retractLoaderRelay = new RelaySubsystem(RETRACT_LOADER_RELAY);
 	driverStationLCDSystem = new DriverStationLCDSystem();
 	winchSubsystem = new WinchSubsystem();
+	loaderSubsystem = new LoaderSubsystem();
 	chassis = new Chassis();	
 	oi = new OI();
 }

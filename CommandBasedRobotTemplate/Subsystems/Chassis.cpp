@@ -37,14 +37,9 @@ void Chassis::driveWithJoystick(Joystick *stickL, Joystick *stickR) {
 	//true precision drive
 	//false standard drive
 	
-	if (DriveState)
-	{
-		robotDrive->TankDrive(stickL, stickR,  TRUE);	
-	}
-	else
-	{
-		robotDrive->TankDrive(stickL, stickR,  FALSE);	
-	}
+		robotDrive->TankDrive(stickL, stickR,  DriveState);
+//		driverStationLCDSystem->PrintfLine(DriverStationLCD::kUser_Line1, "Precision Drive:", DriveState);
+//		driverStationLCDSystem->UpdateLCD();
 }
 
 void Chassis::autoDriveSystem(float left, float right) {
@@ -56,7 +51,7 @@ void Chassis::autoDriveSystem(float left, float right) {
 
 
 void Chassis::ToggleDrive(){
-	DriveState = ~DriveState;
+	DriveState = !DriveState;
 	//true precision drive
 	//false standard drive
 }

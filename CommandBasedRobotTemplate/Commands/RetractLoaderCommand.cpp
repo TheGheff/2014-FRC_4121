@@ -8,7 +8,7 @@ RetractLoaderCommand::RetractLoaderCommand() {
 // Called just before this Command runs the first time
 void RetractLoaderCommand::Initialize() {
 	printf("Initialize\n");
-	SetTimeout(5);
+	//SetTimeout(5);
 	//loaderRelay->On();
 }
 
@@ -27,7 +27,7 @@ void RetractLoaderCommand::Execute() {
 // Make this return true when this Command no longer needs to run execute()
 bool RetractLoaderCommand::IsFinished() {
 	printf("IsFinished\n");
-	return IsTimedOut();
+	return TRUE;//IsTimedOut();
 }
 
 // Called once after isFinished returns true

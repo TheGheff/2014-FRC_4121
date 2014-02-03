@@ -13,7 +13,7 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 	Relay *relay1, *relay2;
-	Jaguar *winchMotor, *feederMotor;
+	Jaguar *winchMotor;
 	DigitalInput *retractLimitSwitch;
 public:
 	WinchSubsystem();

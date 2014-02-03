@@ -6,7 +6,7 @@ WinchSubsystem::WinchSubsystem() : Subsystem("WinchSubsystem") {
 	relay1 = new Relay(ENGAGE_WINCH);
 	relay2 = new Relay(DISENGAGE_WINCH);
 	winchMotor = new Jaguar(WINCHMOTOR);
-	feederMotor = new Jaguar(FEEDERMOTOR);
+//	feederMotor = new Jaguar(FEEDERMOTOR);
 	retractLimitSwitch = new DigitalInput(WINCH_RETRACT_LIMIT_SWITCH_I);
 	
 }

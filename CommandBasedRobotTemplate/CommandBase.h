@@ -7,6 +7,7 @@
 #include "Subsystems/DriverStationLCDSystem.h"
 #include "Subsystems/WinchSubsystem.h"
 #include "Subsystems/Chassis.h"
+#include "Subsystems/LoaderSubsystem.h"
 #include "OI.h"
 
 
@@ -26,9 +27,9 @@ public:
 	static RelaySubsystem *retractLoaderRelay;
 	static DriverStationLCDSystem *driverStationLCDSystem;
 	static WinchSubsystem *winchSubsystem;
-	static Chassis *chassis;	
+	static Chassis *chassis;
+	static LoaderSubsystem *loaderSubsystem;
 	static OI *oi;
-	static FeederSubsystem*feederSubsystem;
 	;
 };
 

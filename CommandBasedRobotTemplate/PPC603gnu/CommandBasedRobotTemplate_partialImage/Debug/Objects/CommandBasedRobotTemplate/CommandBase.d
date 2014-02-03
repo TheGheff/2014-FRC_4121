@@ -390,6 +390,7 @@
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/DriverStationLCDSystem.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/WinchSubsystem.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/Chassis.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/LoaderSubsystem.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/OI.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Robotmap.h \
@@ -1172,6 +1173,8 @@ C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/DriverStationLCDSyst
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/WinchSubsystem.h:
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/Chassis.h:
+
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/LoaderSubsystem.h:
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/OI.h:
 

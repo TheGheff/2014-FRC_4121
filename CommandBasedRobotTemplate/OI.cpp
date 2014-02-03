@@ -6,8 +6,10 @@
 #include "Commands/ExtendLoaderCommand.h"
 #include "Commands/RetractLoaderCommand.h"
 #include "Commands/PullBackWinch.h"
+#include "Commands/ReleaseWinch.h"
 #include "Commands/ToggleDrive.h"
-
+#include "Commands/ActivateLoader.h"
+#include "Commands/DeactivateLoader.h"
 
 OI::OI() {
 	// Process operator interface input here.
@@ -17,17 +19,11 @@ OI::OI() {
 	driveStickR = new Joystick(JOYSTICKRIGHT);
 	button1 = new JoystickButton(driveStickR, TRIGGER);
 	
-	//Winch Motor
-	retractWinch = new JoystickButton(driveStickR, THUMB_BUTTON_DOWN);
+	//Winch Setup
+	retractWinch = new JoystickButton(driveStickR, LEFT_SIDE_UP);
 	retractWinch->WhenPressed(new PullBackWinch());
-	releaseWinch = new JoystickButton(driveStickR, THUMB_BUTTON_UP);
-	releaseWinch->WhenPressed(new RetractLoaderCommand());
-	
-	//Winch Hold Limit Switch
-//	retractHoldWinch = new DigitalInput(WINCH_RETRACT_LIMIT_SWITCH_I);
-//	retractHoldWinch->SetUpSourceEdge(TRUE, FALSE);
-	
-	
+	releaseWinch = new JoystickButton(driveStickR, LEFT_SIDE_DOWN);
+	releaseWinch->WhenPressed(new ReleaseWinch());
 	
 	
 	//Timer babyPuncher = new Timer();
@@ -45,8 +41,10 @@ OI::OI() {
 	loaderSolenoidDown = new JoystickButton(driveStickL, LEFT_SIDE_DOWN);
 	loaderSolenoidDown->WhenPressed(new RetractLoaderCommand());
 	
-	// Create the Precision Drive System controls
-
+	//runs the loader motor
+	loaderButton = new JoystickButton(driveStickL,FRONT_SIDE_LEFT);
+	loaderButton->WhenPressed(new ActivateLoader());
+	//loaderButton->WhenReleased(new DeactivateLoader());
 
 }
 
@@ -57,7 +55,3 @@ Joystick* OI::getDriveStickL() {
 Joystick* OI::getDriveStickR() {
 	return driveStickR;
 }
-
-//Joystick* OI::getManipulatorStick() {
-//	return manipulatorStick;
-//}

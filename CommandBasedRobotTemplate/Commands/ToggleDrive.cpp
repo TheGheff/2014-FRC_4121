@@ -13,6 +13,7 @@ void cmdToggleDrive::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void cmdToggleDrive::Execute() {
 	chassis->ToggleDrive();//driveWithJoystick(oi->getDriveStickL(), oi->getDriveStickR());
+	chassis->driveWithJoystick(oi->getDriveStickL(), oi->getDriveStickR());
 }
 
 // Make this return true when this Command no longer needs to run execute()

@@ -17,7 +17,8 @@ public:
 	DriverStationLCDSystem();
 	void InitDefaultCommand();
 	void ClearLCD(void);
-	void UpdateLCD(int, Gyro*, Encoder*, Encoder*, ADXL345_I2C*);
+	void updateLCD(int, Gyro*, Encoder*, Encoder*, ADXL345_I2C*);
+	void testUpdate();
 };
 
 #endif

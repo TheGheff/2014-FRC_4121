@@ -15,6 +15,8 @@ void _GLOBAL__I__ZN12ReleaseWinchC2Ev();
 
 void _GLOBAL__I__ZN13PullBackWinchC2Ev();
 
+void _GLOBAL__I__ZN14ActivateLoaderC2Ev();
+
 void _GLOBAL__I__ZN14ExampleCommandC2Ev();
 
 void _GLOBAL__I__ZN14PrecisionDriveC2Ev();
@@ -24,6 +26,10 @@ void _GLOBAL__I__ZN14RelaySubsystemC2Ec();
 void _GLOBAL__I__ZN14WinchSubsystemC2Ev();
 
 void _GLOBAL__I__ZN14cmdToggleDriveC2Ev();
+
+void _GLOBAL__I__ZN15LoaderSubsystemC2Ev();
+
+void _GLOBAL__I__ZN16DeactivateLoaderC2Ev();
 
 void _GLOBAL__I__ZN16ExampleSubsystemC2Ev();
 
@@ -98,11 +104,14 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN11CommandBaseC2EPKc,
     _GLOBAL__I__ZN12ReleaseWinchC2Ev,
     _GLOBAL__I__ZN13PullBackWinchC2Ev,
+    _GLOBAL__I__ZN14ActivateLoaderC2Ev,
     _GLOBAL__I__ZN14ExampleCommandC2Ev,
     _GLOBAL__I__ZN14PrecisionDriveC2Ev,
     _GLOBAL__I__ZN14RelaySubsystemC2Ec,
     _GLOBAL__I__ZN14WinchSubsystemC2Ev,
     _GLOBAL__I__ZN14cmdToggleDriveC2Ev,
+    _GLOBAL__I__ZN15LoaderSubsystemC2Ev,
+    _GLOBAL__I__ZN16DeactivateLoaderC2Ev,
     _GLOBAL__I__ZN16ExampleSubsystemC2Ev,
     _GLOBAL__I__ZN17DriveWithJoystickC2Ev,
     _GLOBAL__I__ZN19ExtendLoaderCommandC2Ev,
@@ -147,6 +156,8 @@ void _GLOBAL__D__ZN12ReleaseWinchC2Ev();
 
 void _GLOBAL__D__ZN13PullBackWinchC2Ev();
 
+void _GLOBAL__D__ZN14ActivateLoaderC2Ev();
+
 void _GLOBAL__D__ZN14ExampleCommandC2Ev();
 
 void _GLOBAL__D__ZN14PrecisionDriveC2Ev();
@@ -156,6 +167,10 @@ void _GLOBAL__D__ZN14RelaySubsystemC2Ec();
 void _GLOBAL__D__ZN14WinchSubsystemC2Ev();
 
 void _GLOBAL__D__ZN14cmdToggleDriveC2Ev();
+
+void _GLOBAL__D__ZN15LoaderSubsystemC2Ev();
+
+void _GLOBAL__D__ZN16DeactivateLoaderC2Ev();
 
 void _GLOBAL__D__ZN16ExampleSubsystemC2Ev();
 
@@ -220,11 +235,14 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN11CommandBaseC2EPKc,
     _GLOBAL__D__ZN12ReleaseWinchC2Ev,
     _GLOBAL__D__ZN13PullBackWinchC2Ev,
+    _GLOBAL__D__ZN14ActivateLoaderC2Ev,
     _GLOBAL__D__ZN14ExampleCommandC2Ev,
     _GLOBAL__D__ZN14PrecisionDriveC2Ev,
     _GLOBAL__D__ZN14RelaySubsystemC2Ec,
     _GLOBAL__D__ZN14WinchSubsystemC2Ev,
     _GLOBAL__D__ZN14cmdToggleDriveC2Ev,
+    _GLOBAL__D__ZN15LoaderSubsystemC2Ev,
+    _GLOBAL__D__ZN16DeactivateLoaderC2Ev,
     _GLOBAL__D__ZN16ExampleSubsystemC2Ev,
     _GLOBAL__D__ZN17DriveWithJoystickC2Ev,
     _GLOBAL__D__ZN19ExtendLoaderCommandC2Ev,
