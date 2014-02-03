@@ -28,7 +28,7 @@ public:
 	static WinchSubsystem *winchSubsystem;
 	static Chassis *chassis;	
 	static OI *oi;
-	static FeederSubsystem*feedersubsystem;
+	static FeederSubsystem*feederSubsystem;
 	;
 };
 
