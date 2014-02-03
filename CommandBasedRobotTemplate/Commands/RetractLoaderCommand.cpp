@@ -18,10 +18,10 @@ void RetractLoaderCommand::Execute() {
 	printf("Execute\n");
 	DriverStationLCD *ds = DriverStationLCD::GetInstance();
 	ds->PrintfLine(DriverStationLCD::kUser_Line2, "Execute");
-	extendLoaderRelay->Off();
+	RelayExtend->Off();
 	// ## FIX ##
 	// Consider inserting delay in here
-	retractLoaderRelay->On();	
+	RelayRetract->On();	
 	
 }
 
