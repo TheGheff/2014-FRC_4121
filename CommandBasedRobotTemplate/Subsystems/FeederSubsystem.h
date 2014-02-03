@@ -13,7 +13,7 @@ private:
 	
 	
 public:
-	Feeder();
+	FeederSubsystem();
 	void InitDefaultCommand();
 	void FeederOn(float);
 	void FeederOff(float);
