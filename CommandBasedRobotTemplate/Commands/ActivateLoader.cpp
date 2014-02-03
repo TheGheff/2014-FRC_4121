@@ -2,7 +2,7 @@
 
 ActivateLoader::ActivateLoader() {
 	// Use requires() here to declare subsystem dependencies
-	Requires(loaderSubsystem);
+	Requires(LoaderSubsystem);
 }
 
 // Called just before this Command runs the first time
@@ -13,7 +13,7 @@ void ActivateLoader::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ActivateLoader::Execute() {
-	loaderSubsystem->RunLoader();
+	LoaderSubsystem->LoaderOn();
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -26,14 +26,14 @@ bool ActivateLoader::IsFinished() {
 void ActivateLoader::End() {
 	printf("End\n");
 	//winchSubsystem->Release();
-	//loaderSubsystem->StopEverything();
+	//LoaderSubsystem->StopEverything();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void ActivateLoader::Interrupted() {
 	printf("Interrupted\n");
-	//loaderSubsystem->StopEverything();
+	//LoaderSubsystem->StopEverything();
 }
 
 
