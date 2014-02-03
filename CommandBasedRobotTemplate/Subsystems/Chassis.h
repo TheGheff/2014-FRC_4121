@@ -13,7 +13,7 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 	RobotDrive *robotDrive;
-	Jaguar *frontLeftMotor, *frontRightMotor, *winchMotor, *feederMotor;
+	Jaguar *frontLeftMotor, *frontRightMotor;
 	bool DriveState;
 	//DigitalOutput *leftFrontBrake, *leftRearBrake, *rightFrontBrake, *rightRearBrake;	
 public:
