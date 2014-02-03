@@ -3,6 +3,7 @@
 RetractLoaderCommand::RetractLoaderCommand() {
 	// Use requires() here to declare subsystem dependencies
 	//requires(examplesubsystem)
+	Requires (LoaderSubsystem);
 }
 
 // Called just before this Command runs the first time
