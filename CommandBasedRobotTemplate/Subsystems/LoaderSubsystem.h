@@ -14,11 +14,15 @@ private:
 	// for methods that implement subsystem capabilities
 
 	Jaguar *feederMotor;
+	Relay  *extendSolenoid, *retractSolenoid;
 
 public:
 	LoaderSubsystem();
 	void InitDefaultCommand();
-	void RunLoader();
+	void LoaderOn();
+	void LoaderOff();
+	void RelayExtend();
+	void RelayRetract();
 	void StopEverything();
 	
 };
