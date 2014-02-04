@@ -3,7 +3,6 @@
 DeactivateLoader::DeactivateLoader() {
 	// Use requires() here to declare subsystem dependencies
 	//requires(examplesubsystem)
-	Requires (LoaderSubsystem);
 }
 
 // Called just before this Command runs the first time
@@ -14,7 +13,7 @@ void DeactivateLoader::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void DeactivateLoader::Execute() {
-	LoaderSubsystem->LoaderOff();
+	loaderSubsystem->RunLoader();
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -27,14 +26,14 @@ bool DeactivateLoader::IsFinished() {
 void DeactivateLoader::End() {
 	printf("End\n");
 	//winchSubsystem->Release();
-	LoaderSubsystem->StopEverything();
+	loaderSubsystem->StopEverything();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void DeactivateLoader::Interrupted() {
 	printf("Interrupted\n");
-	LoaderSubsystem->StopEverything();
+	loaderSubsystem->StopEverything();
 }
 
 

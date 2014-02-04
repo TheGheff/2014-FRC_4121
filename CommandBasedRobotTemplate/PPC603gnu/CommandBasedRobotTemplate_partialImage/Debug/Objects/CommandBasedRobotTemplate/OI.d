@@ -406,7 +406,9 @@
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ReleaseWinch.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ToggleDrive.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ActivateLoader.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/DeactivateLoader.h
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/DeactivateLoader.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/EjectLoader.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/StopEverything.h
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/OI.h:
 
@@ -1219,3 +1221,7 @@ C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ToggleDrive.h:
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ActivateLoader.h:
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/DeactivateLoader.h:
+
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/EjectLoader.h:
+
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/StopEverything.h:

@@ -42,7 +42,7 @@ void DriverStationLCDSystem::updateLCD(int type, Gyro* gyro, Encoder* leftEncode
 	dsLCD->UpdateLCD();
 }
 
-void DriverStationLCDSystem::testUpdate() {	
+void DriverStationLCDSystem::testUpdate(char* text) {	
 	
 	dsLCD->PrintfLine(DriverStationLCD::kMain_Line6, ",Team #4121!");
 	
@@ -54,6 +54,6 @@ void DriverStationLCDSystem::testUpdate() {
 //		dsLCD->PrintfLine(DriverStationLCD::kUser_Line5, "Y-Axis Acc = %f", accel->GetAcceleration(accel->kAxis_Y));
 //		dsLCD->PrintfLine(DriverStationLCD::kUser_Line6, "Z-Axis Acc = %f", accel->GetAcceleration(accel->kAxis_Z));
 		
-	dsLCD->PrintfLine(DriverStationLCD::kUser_Line2,"The witch has been found! Verily");
+	dsLCD->PrintfLine(DriverStationLCD::kUser_Line2,text);
 	dsLCD->UpdateLCD();
 }

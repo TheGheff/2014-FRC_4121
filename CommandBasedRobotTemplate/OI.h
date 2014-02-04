@@ -15,10 +15,11 @@ public:
 	//Left Joystick
 	Joystick* getDriveStickL();
 	
-	JoystickButton 	*loaderButton;
+	JoystickButton 	*loaderIngestButton, *loaderEjectButton, *loaderStopButton;
 	JoystickButton 	*precisionDriveButton; // Button 2 is the down thumb button
 	JoystickButton 	*loaderSolenoidUp, *loaderSolenoidDown;  
 	JoystickButton 	*retractWinch, *releaseWinch;
+	JoystickButton  *stopAll;
 	DigitalInput	*retractHoldWinch;
 	
 };

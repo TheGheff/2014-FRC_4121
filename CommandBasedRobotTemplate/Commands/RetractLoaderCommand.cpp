@@ -3,7 +3,6 @@
 RetractLoaderCommand::RetractLoaderCommand() {
 	// Use requires() here to declare subsystem dependencies
 	//requires(examplesubsystem)
-	Requires (LoaderSubsystem);
 }
 
 // Called just before this Command runs the first time
@@ -18,10 +17,10 @@ void RetractLoaderCommand::Execute() {
 	printf("Execute\n");
 	DriverStationLCD *ds = DriverStationLCD::GetInstance();
 	ds->PrintfLine(DriverStationLCD::kUser_Line2, "Execute");
-	RelayExtend->Off();
+	extendLoaderRelay->Off();
 	// ## FIX ##
 	// Consider inserting delay in here
-	RelayRetract->On();	
+	retractLoaderRelay->On();	
 	
 }
 

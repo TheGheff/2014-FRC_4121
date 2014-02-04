@@ -23,6 +23,7 @@ public:
 	void driveWithJoystick(Joystick *stickL, Joystick *stickR);
 	//void precisionDriveSystem(Joystick *stickL, Joystick *stickR);
 	void ToggleDrive();
+	void StopEverything();
 
 	//void brake();
 	//void coast();

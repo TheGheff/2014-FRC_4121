@@ -30,13 +30,13 @@
 typedef enum{
 	TRIGGER = 1, // Button Number 1
 	THUMB_BUTTON_DOWN, // Button Number 2
-	THUMB_BUTTON_UP,
-	THUMB_BUTTON_LEFT,
+	THUMB_BUTTON_UP,//button 3
+	THUMB_BUTTON_LEFT,//button 4
 	THUMB_BUTTON_RIGHT, // Button Number 5	
-	LEFT_SIDE_UP,
-	LEFT_SIDE_DOWN,
-	FRONT_SIDE_LEFT,
-	FRONT_SIDE_RIGHT,
+	LEFT_SIDE_UP,//button6
+	LEFT_SIDE_DOWN,//button 7
+	FRONT_SIDE_LEFT,// 8
+	FRONT_SIDE_RIGHT,//9
 	RIGHT_SIDE_DOWN, // Button Number 10
 	RIGHT_SIDE_UP,
 	NUM_OF_JOYSTICK_BUTTONS
@@ -45,8 +45,8 @@ typedef enum{
 //######### Motors #########
 #define DRIVEMOTORRIGHT (2)
 #define DRIVEMOTORLEFT  (1)
-#define WINCHMOTOR		(3)
-#define FEEDERMOTOR 	(4)
+#define WINCHMOTOR		(4)
+#define FEEDERMOTOR 	(3)
 
 typedef enum{
 	ENGAGE_WINCH = 1,

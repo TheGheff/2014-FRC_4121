@@ -6,7 +6,7 @@
 /**
  *
  *
- * @author 322Programmer
+ * @author Deus Ex Machina
  */
 class DriverStationLCDSystem: public Subsystem {
 private:
@@ -18,7 +18,7 @@ public:
 	void InitDefaultCommand();
 	void ClearLCD(void);
 	void updateLCD(int, Gyro*, Encoder*, Encoder*, ADXL345_I2C*);
-	void testUpdate();
+	void testUpdate(char*);
 };
 
 #endif

@@ -55,5 +55,11 @@ void Chassis::ToggleDrive(){
 	//true precision drive
 	//false standard drive
 }
+void Chassis::StopEverything(){
+	frontLeftMotor->Set(0);
+	frontRightMotor->Set(0);
+}
+	
+	
 
 

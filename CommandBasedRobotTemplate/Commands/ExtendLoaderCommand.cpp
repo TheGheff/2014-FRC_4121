@@ -3,7 +3,6 @@
 ExtendLoaderCommand::ExtendLoaderCommand() {
 	// Use requires() here to declare subsystem dependencies
 	//requires(examplesubsystem)
-	Requires (LoaderSubsystem);
 }
 
 // Called just before this Command runs the first time
@@ -18,10 +17,10 @@ void ExtendLoaderCommand::Execute() {
 	printf("Execute\n");
 	DriverStationLCD *ds = DriverStationLCD::GetInstance();
 	ds->PrintfLine(DriverStationLCD::kUser_Line2, "Execute");
-	RelayRetract->Off();
+	retractLoaderRelay->Off();
 	// ## FIX ##
 	// Consider inserting delay in here
-	RelayExtend->On();	
+	extendLoaderRelay->On();	
 	
 }
 

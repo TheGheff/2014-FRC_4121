@@ -9,7 +9,7 @@ DriveWithJoystick::DriveWithJoystick() {
 // Called just before this Command runs the first time
 void DriveWithJoystick::Initialize() {
 	driverStationLCDSystem->updateLCD(1,NULL,NULL,NULL,NULL);
-	driverStationLCDSystem->testUpdate();
+	driverStationLCDSystem->testUpdate("haha");
 }
 
 // Called repeatedly when this Command is scheduled to run
