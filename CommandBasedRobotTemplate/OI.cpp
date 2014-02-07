@@ -16,6 +16,9 @@
 
 OI::OI() {
 	// Process operator interface input here.
+	
+	//setup driverstation ldc
+	dsLCD = DriverStationLCD::GetInstance();
 
 	//Setup the Camera Gimble
 	cameraControlStick = new Joystick(JOYSTICKCAMERA); 
@@ -29,9 +32,6 @@ OI::OI() {
 	retractWinch->WhenPressed(new PullBackWinch());
 	releaseWinch = new JoystickButton(driveStickR, THUMB_BUTTON_UP);
 	releaseWinch->WhenPressed(new ReleaseWinch());
-	
-	
-	//Timer babyPuncher = new Timer();
 
 	//Left Joystick
 	driveStickL = new Joystick(JOYSTICKLEFT);
@@ -62,6 +62,11 @@ OI::OI() {
 	stopAll->WhenPressed(new EmergencyStop());
 
 }
+
+DriverStationLCD* OI::getDriverStation() {
+	return dsLCD;
+}
+
 
 Joystick* OI::getDriveStickL() {
 	return driveStickL;
