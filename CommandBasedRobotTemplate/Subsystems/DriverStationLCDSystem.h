@@ -12,7 +12,7 @@ class DriverStationLCDSystem: public Subsystem {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
-	DriverStationLCD *dsLCD;
+	// DriverStationLCD *dsLCD;
 public:
 	DriverStationLCDSystem();
 	void InitDefaultCommand();
