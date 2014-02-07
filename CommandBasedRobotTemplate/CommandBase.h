@@ -9,6 +9,7 @@
 #include "Subsystems/Chassis.h"
 #include "Subsystems/LoaderSubsystem.h"
 #include "OI.h"
+#include "Subsystems/CameraSubsystem.h"
 
 
 /**
@@ -30,7 +31,7 @@ public:
 	static Chassis *chassis;
 	static LoaderSubsystem *loaderSubsystem;
 	static OI *oi;
-	;
+	static CameraGimble *driveCamera;
 };
 
 #endif

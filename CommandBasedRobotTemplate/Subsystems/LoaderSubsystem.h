@@ -14,6 +14,8 @@ private:
 	// for methods that implement subsystem capabilities
 
 	Jaguar *feederMotor;
+	DigitalInput *retractLimitSwitch, *extendLimitSwitch;
+	DoubleSolenoid *loaderSol;
 
 public:
 	LoaderSubsystem();
@@ -21,7 +23,11 @@ public:
 	void RunLoader();
 	void StopEverything();
 	void Eject();
-	
+	bool ReadLoaderRetractLimitSwitch();
+	bool ReadLoaderExtendLimitSwitch();
+	void RaiseLoader();
+	void LowerLoader();
+	void StopLoader();
 };
 
 #endif

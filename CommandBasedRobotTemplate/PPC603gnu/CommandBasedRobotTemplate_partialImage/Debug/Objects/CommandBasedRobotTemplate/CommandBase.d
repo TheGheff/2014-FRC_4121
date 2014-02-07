@@ -393,6 +393,7 @@
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/LoaderSubsystem.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/OI.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/CameraSubsystem.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Robotmap.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Scheduler.h
 
@@ -1179,6 +1180,8 @@ C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/LoaderSubsystem.h:
 C:/WindRiver/workspace/CommandBasedRobotTemplate/OI.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
+
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/CameraSubsystem.h:
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Robotmap.h:
 

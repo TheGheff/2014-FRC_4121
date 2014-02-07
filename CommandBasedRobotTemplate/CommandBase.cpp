@@ -6,6 +6,7 @@
 #include "Subsystems/Chassis.h"
 #include "Commands/Scheduler.h"
 #include "Subsystems/WinchSubsystem.h"
+#include "Subsystems/CameraSubsystem.h"
 
 CommandBase::CommandBase(const char *name) : Command(name) {
 
@@ -23,6 +24,7 @@ DriverStationLCDSystem* CommandBase::driverStationLCDSystem = NULL;
 LoaderSubsystem* CommandBase::loaderSubsystem = NULL;
 Chassis* CommandBase::chassis = NULL;
 OI* CommandBase::oi = NULL;
+CameraGimble* CommandBase::driveCamera = NULL;
 
 void CommandBase::init() {
     // Create a single static instance of all of your subsystems. The following
@@ -35,4 +37,5 @@ void CommandBase::init() {
 	loaderSubsystem = new LoaderSubsystem();
 	chassis = new Chassis();	
 	oi = new OI();
+//	driveCamera = new CameraGimble();
 }

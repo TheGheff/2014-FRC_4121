@@ -12,11 +12,14 @@
 #include "Commands/DeactivateLoader.h"
 #include "Commands/EjectLoader.h"
 #include "Commands/StopEverything.h"
+#include "Commands/EmergencyStop.h"
 
 OI::OI() {
 	// Process operator interface input here.
 
-	// Create the two Joystick objects
+	//Setup the Camera Gimble
+	cameraControlStick = new Joystick(JOYSTICKCAMERA); 
+
 	//Right Joystick
 	driveStickR = new Joystick(JOYSTICKRIGHT);
 	button1 = new JoystickButton(driveStickR, TRIGGER);
@@ -56,7 +59,7 @@ OI::OI() {
 	
 	//stop everything on robot
 	stopAll = new JoystickButton(driveStickR,RIGHT_SIDE_UP);
-	stopAll->WhenPressed(new StopEverything());
+	stopAll->WhenPressed(new EmergencyStop());
 
 }
 

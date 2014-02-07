@@ -14,14 +14,11 @@ void ExtendLoaderCommand::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ExtendLoaderCommand::Execute() {
-	printf("Execute\n");
-	DriverStationLCD *ds = DriverStationLCD::GetInstance();
-	ds->PrintfLine(DriverStationLCD::kUser_Line2, "Execute");
-	retractLoaderRelay->Off();
-	// ## FIX ##
-	// Consider inserting delay in here
-	extendLoaderRelay->On();	
 	
+	while(!loaderSubsystem->ReadLoaderExtendLimitSwitch()){
+		loaderSubsystem->LowerLoader();
+	}
+	End();
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -32,7 +29,8 @@ bool ExtendLoaderCommand::IsFinished() {
 
 // Called once after isFinished returns true
 void ExtendLoaderCommand::End() {
-	printf("End\n");
+	
+	loaderSubsystem->StopLoader();
 //	extendRelay->Off();
 }
 

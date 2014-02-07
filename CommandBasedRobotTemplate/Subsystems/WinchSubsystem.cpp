@@ -8,6 +8,7 @@ WinchSubsystem::WinchSubsystem() : Subsystem("WinchSubsystem") {
 	winchMotor = new Jaguar(WINCHMOTOR);
 //	feederMotor = new Jaguar(FEEDERMOTOR);
 	retractLimitSwitch = new DigitalInput(WINCH_RETRACT_LIMIT_SWITCH_I);
+	extendLimitSwitch = new DigitalInput(WINCH_EXTEND_LIMIT_SWITCH_I);
 	
 }
     
@@ -17,15 +18,17 @@ void WinchSubsystem::InitDefaultCommand() {
 }
 
 void WinchSubsystem::Retract() {
-	relay1->Set(Relay::kOn);//turns on relay1 which initiates pulling back of the launcher
 	relay2->Set(Relay::kOff);
-	winchMotor->SetSpeed(.7);
+	relay1->Set(Relay::kOn);//turns on relay1 which initiates pulling back of the launcher
+//	dsLCD->testUpdate("Winch::Retract");
+	winchMotor->SetSpeed(1);
 }
 
 void WinchSubsystem::RetractHold() {
 	//holds the launcher in retract state but turns the winch motor off
-	relay1->Set(Relay::kOn);
 	relay2->Set(Relay::kOff);
+	relay1->Set(Relay::kOn);
+	
 	winchMotor->SetSpeed(0);
 }
 
@@ -42,9 +45,14 @@ void WinchSubsystem::StopEverything(){
 	winchMotor->SetSpeed(0);//winch motor stops running
 }
 
-bool WinchSubsystem::ReadLimitSwitch(){
+bool WinchSubsystem::ReadWinchRetractLimitSwitch(){
 	return retractLimitSwitch->Get();
 }
+
+bool WinchSubsystem::ReadWinchExtendLimitSwitch(){
+	return extendLimitSwitch->Get();
+}
+
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 

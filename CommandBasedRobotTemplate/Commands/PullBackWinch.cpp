@@ -14,8 +14,7 @@ void PullBackWinch::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void PullBackWinch::Execute() {
 	printf("Execute\n");
-	DriverStationLCD *ds = DriverStationLCD::GetInstance();
-	ds->PrintfLine(DriverStationLCD::kUser_Line2, "Execute");
+	//dsLCD->testUpdate("PullBackWinch::exe");
 	winchSubsystem->Retract();
 }
 
@@ -23,7 +22,7 @@ void PullBackWinch::Execute() {
 bool PullBackWinch::IsFinished() {
 	//printf("IsFinished\n");
 	bool ret_val = false;
-	if (winchSubsystem->ReadLimitSwitch())
+	if (winchSubsystem->ReadWinchRetractLimitSwitch())
 	{
 		winchSubsystem->RetractHold();
 		ret_val = true;

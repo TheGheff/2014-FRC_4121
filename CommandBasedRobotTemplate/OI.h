@@ -5,7 +5,8 @@
 
 class OI {
 private:
-	Joystick *driveStickL, *driveStickR;
+	Joystick *driveStickL, *driveStickR, *cameraControlStick;
+	
 public:
 	OI();
 	//Right JoyStick

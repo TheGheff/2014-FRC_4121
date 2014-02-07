@@ -28,7 +28,7 @@ void DriverStationLCDSystem::ClearLCD(void) {
 void DriverStationLCDSystem::updateLCD(int type, Gyro* gyro, Encoder* leftEncoder,
 		Encoder* rightEncoder, ADXL345_I2C* accel) {	
 	
-	dsLCD->PrintfLine(DriverStationLCD::kMain_Line6, ",Team #4121!");
+	//dsLCD->PrintfLine(DriverStationLCD::kMain_Line6, ",Team #4121!");
 	
 	
 //		dsLCD->PrintfLine(DriverStationLCD::kUser_Line1, "Gyro Angle: %7.3f", gyro->GetAngle());
@@ -44,7 +44,7 @@ void DriverStationLCDSystem::updateLCD(int type, Gyro* gyro, Encoder* leftEncode
 
 void DriverStationLCDSystem::testUpdate(char* text) {	
 	
-	dsLCD->PrintfLine(DriverStationLCD::kMain_Line6, ",Team #4121!");
+	//dsLCD->PrintfLine(DriverStationLCD::kMain_Line6, ",Team #4121!");
 	
 	
 //		dsLCD->PrintfLine(DriverStationLCD::kUser_Line1, "Gyro Angle: %7.3f", gyro->GetAngle());

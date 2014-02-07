@@ -5,6 +5,9 @@ LoaderSubsystem::LoaderSubsystem() : Subsystem("LoaderSubsystem") {
 	//this is the constructor
 
 	feederMotor = new Jaguar(FEEDERMOTOR);
+	retractLimitSwitch = new DigitalInput(LOADER_RETRACT_LIMIT_SWITCH_I);
+	extendLimitSwitch = new DigitalInput(LOADER_EXTEND_LIMIT_SWITCH_I);
+	loaderSol = new DoubleSolenoid(4,5);//channels
 
 }
     
@@ -25,8 +28,29 @@ void LoaderSubsystem::Eject(){
 
 void LoaderSubsystem::StopEverything(){
 	feederMotor->SetSpeed(0);//winch motor stops running
+	loaderSol->Set(DoubleSolenoid::kOff);
 }
 
+
+bool LoaderSubsystem::ReadLoaderRetractLimitSwitch(){
+	return retractLimitSwitch->Get();
+}
+
+bool LoaderSubsystem::ReadLoaderExtendLimitSwitch(){
+	return extendLimitSwitch->Get();
+}
+
+void  LoaderSubsystem::RaiseLoader(){
+	loaderSol->Set(DoubleSolenoid::kReverse);
+}
+
+void  LoaderSubsystem::LowerLoader(){
+	loaderSol->Set(DoubleSolenoid::kForward);
+}
+
+void  LoaderSubsystem::StopLoader(){
+	loaderSol->Set(DoubleSolenoid::kOff);
+}
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 

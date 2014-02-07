@@ -399,6 +399,7 @@
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/Chassis.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/LoaderSubsystem.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../OI.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/CameraSubsystem.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/PrecisionDrive.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ExtendLoaderCommand.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/RetractLoaderCommand.h \
@@ -408,7 +409,8 @@
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ActivateLoader.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/DeactivateLoader.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/EjectLoader.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/StopEverything.h
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/StopEverything.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/EmergencyStop.h
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/OI.h:
 
@@ -1206,6 +1208,8 @@ C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/LoaderSu
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../OI.h:
 
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/CameraSubsystem.h:
+
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/PrecisionDrive.h:
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ExtendLoaderCommand.h:
@@ -1225,3 +1229,5 @@ C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/DeactivateLoader.h:
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/EjectLoader.h:
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/StopEverything.h:
+
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/EmergencyStop.h:

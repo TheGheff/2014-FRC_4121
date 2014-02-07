@@ -14,13 +14,11 @@ void RetractLoaderCommand::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void RetractLoaderCommand::Execute() {
-	printf("Execute\n");
-	DriverStationLCD *ds = DriverStationLCD::GetInstance();
-	ds->PrintfLine(DriverStationLCD::kUser_Line2, "Execute");
-	extendLoaderRelay->Off();
-	// ## FIX ##
-	// Consider inserting delay in here
-	retractLoaderRelay->On();	
+	
+	while(!loaderSubsystem->ReadLoaderRetractLimitSwitch()){
+		loaderSubsystem->RaiseLoader();
+	}
+	End();
 	
 }
 
@@ -32,7 +30,7 @@ bool RetractLoaderCommand::IsFinished() {
 
 // Called once after isFinished returns true
 void RetractLoaderCommand::End() {
-	printf("End\n");
+	loaderSubsystem->StopLoader();
 //	extendRelay->Off();
 }
 

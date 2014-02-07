@@ -22,6 +22,7 @@
 //#########  User Input Devices #########
 #define JOYSTICKRIGHT 	(1)
 #define JOYSTICKLEFT  	(2)
+#define JOYSTICKCAMERA  	(3)
 
 
 //######### Joystick Buttons  #########
@@ -42,11 +43,7 @@ typedef enum{
 	NUM_OF_JOYSTICK_BUTTONS
 } JOYSTICE_BUTTONS_T;
 
-//######### Motors #########
-#define DRIVEMOTORRIGHT (2)
-#define DRIVEMOTORLEFT  (1)
-#define WINCHMOTOR		(4)
-#define FEEDERMOTOR 	(3)
+
 
 typedef enum{
 	ENGAGE_WINCH = 1,
@@ -64,13 +61,31 @@ typedef enum{
 
 typedef enum{
 	WINCH_RETRACT_LIMIT_SWITCH_I = 1,
-	DIO2,
-	DIO3,
-	DIO4,
+	WINCH_EXTEND_LIMIT_SWITCH_I,
+	LOADER_RETRACT_LIMIT_SWITCH_I,
+	LOADER_EXTEND_LIMIT_SWITCH_I,
 	DIO5,
 	DIO6,
 	DIO7,
 	DIO8
 }DIGITAL_IO_T;
+
+
+//######### Motors #########
+//#define DRIVEMOTORRIGHT (2)
+//#define DRIVEMOTORLEFT  (1)
+//#define WINCHMOTOR		(4)
+//#define FEEDERMOTOR 	(3)
+
+typedef enum{
+	DRIVEMOTORLEFT = 1,
+	DRIVEMOTORRIGHT,
+	FEEDERMOTOR,
+	WINCHMOTOR,
+	DRIVECAMERAVERTCALMOTOR,
+	DRIVECAMERAHORIZONTALMOTOR
+	
+}PWM_CHANNELS_t;
+
 
 #endif
