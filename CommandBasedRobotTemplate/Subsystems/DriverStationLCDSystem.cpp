@@ -2,7 +2,7 @@
 #include "../Robotmap.h"
 
 DriverStationLCDSystem::DriverStationLCDSystem() : Subsystem("DriverStationLCDSystem") {
-	dsLCD = DriverStationLCD::GetInstance();
+	// dsLCD = DriverStationLCD::GetInstance();
 }
     
 void DriverStationLCDSystem::InitDefaultCommand() {
