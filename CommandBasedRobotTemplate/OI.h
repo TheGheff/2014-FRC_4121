@@ -9,6 +9,9 @@ private:
 	
 public:
 	OI();
+	
+	DriverStationLCD *dsLCD;
+
 	//Right JoyStick
 	Joystick* getDriveStickR();
 	JoystickButton *button1; // Button 1 is the trigger
