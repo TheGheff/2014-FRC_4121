@@ -2,9 +2,8 @@
 #include "../Robotmap.h"
 
 WinchSubsystem::WinchSubsystem() : Subsystem("WinchSubsystem") {
-	//this is the constructor
-	relay1 = new Relay(ENGAGE_WINCH);
-	relay2 = new Relay(DISENGAGE_WINCH);
+	//this is the constructor\
+	sol1 = new DoubleSolenoid(2,3);//channels (the buttons used to retract and release winch)
 	winchMotor = new Jaguar(WINCHMOTOR);
 //	feederMotor = new Jaguar(FEEDERMOTOR);
 	retractLimitSwitch = new DigitalInput(WINCH_RETRACT_LIMIT_SWITCH_I);
@@ -18,7 +17,7 @@ void WinchSubsystem::InitDefaultCommand() {
 }
 
 void WinchSubsystem::Retract() {
-	relay2->Set(Relay::kOff);
+	sol1->Set(DoubleSolenoid::kReverse);
 	relay1->Set(Relay::kOn);//turns on relay1 which initiates pulling back of the launcher
 //	oi->getDriverStation()->testUpdate("Winch::Retract");
 	winchMotor->SetSpeed(1);
@@ -26,22 +25,22 @@ void WinchSubsystem::Retract() {
 
 void WinchSubsystem::RetractHold() {
 	//holds the launcher in retract state but turns the winch motor off
-	relay2->Set(Relay::kOff);
-	relay1->Set(Relay::kOn);
+	sol1->Set(DoubleSolenoid::kReverse);
+	
 	
 	winchMotor->SetSpeed(0);
 }
 
 
 void WinchSubsystem::Release() {
-	relay1->Set(Relay::kOff); // Turns off some lights in the relay section
-	relay2->Set(Relay::kOn); //turns on relay2 which releases the launcher
+	sol1->Set(DoubleSolenoid::kForward); // Turns off some lights in the relay section
+ 
 	winchMotor->SetSpeed(0);
 }
 
 void WinchSubsystem::StopEverything(){
-	relay1->Set(Relay::kOff); //stops the pulling back of and the releasing of the winch
-	relay2->Set(Relay::kOff);
+	sol1->Set(DoubleSolenoid::kOff); //stops the pulling back of and the releasing of the winch
+	
 	winchMotor->SetSpeed(0);//winch motor stops running
 }
 
