@@ -17,8 +17,7 @@ void WinchSubsystem::InitDefaultCommand() {
 }
 
 void WinchSubsystem::Retract() {
-	sol1->Set(DoubleSolenoid::kReverse);
-	relay1->Set(Relay::kOn);//turns on relay1 which initiates pulling back of the launcher
+	sol1->Set(DoubleSolenoid::kReverse);//puts solenoid into reverse to pull back the winch
 //	oi->getDriverStation()->testUpdate("Winch::Retract");
 	winchMotor->SetSpeed(1);
 }
@@ -33,7 +32,7 @@ void WinchSubsystem::RetractHold() {
 
 
 void WinchSubsystem::Release() {
-	sol1->Set(DoubleSolenoid::kForward); // Turns off some lights in the relay section
+	sol1->Set(DoubleSolenoid::kForward); // lets the winch release forward to let hopper go
  
 	winchMotor->SetSpeed(0);
 }
