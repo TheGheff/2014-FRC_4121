@@ -2,7 +2,7 @@
 #include "../Robotmap.h"
 
 WinchSubsystem::WinchSubsystem() : Subsystem("WinchSubsystem") {
-	//this is the constructor\
+	//this is the constructor
 	sol1 = new DoubleSolenoid(2,3);//channels (the buttons used to retract and release winch)
 	winchMotor = new Jaguar(WINCHMOTOR);
 //	feederMotor = new Jaguar(FEEDERMOTOR);
