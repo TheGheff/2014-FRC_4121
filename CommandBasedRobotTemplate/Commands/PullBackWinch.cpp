@@ -24,7 +24,7 @@ bool PullBackWinch::IsFinished() {
 	bool ret_val = false;
 	if (winchSubsystem->ReadWinchRetractLimitSwitch())
 	{
-		winchSubsystem->RetractHold();
+	//	winchSubsystem->RetractHold();
 		ret_val = true;
 	}
 	else

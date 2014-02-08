@@ -9,6 +9,8 @@
  * @author ExampleAuthor
  */
 class PullBackWinch: public CommandBase {
+private:
+	DriverStationLCDSystem *dsLCDSystem;
 public:
 	PullBackWinch();
 	virtual void Initialize();

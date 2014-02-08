@@ -20,7 +20,7 @@ void WinchSubsystem::InitDefaultCommand() {
 void WinchSubsystem::Retract() {
 	relay2->Set(Relay::kOff);
 	relay1->Set(Relay::kOn);//turns on relay1 which initiates pulling back of the launcher
-	OI::getDriverStation()->testUpdate("Winch::Retract");
+//	oi->getDriverStation()->testUpdate("Winch::Retract");
 	winchMotor->SetSpeed(1);
 }
 

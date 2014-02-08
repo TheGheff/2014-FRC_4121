@@ -9,6 +9,7 @@ private:
 	
 public:
 	OI();
+	DriverStationLCD* getDriverStation();
 	
 	DriverStationLCD *dsLCD;
 

@@ -2,7 +2,6 @@
 #define DRIVER_STATION_LCD_SYSTEM_H
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
-
 /**
  *
  *
@@ -12,7 +11,7 @@ class DriverStationLCDSystem: public Subsystem {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
-	// DriverStationLCD *dsLCD;
+	 DriverStationLCD *dsLCDSystem;
 public:
 	DriverStationLCDSystem();
 	void InitDefaultCommand();
