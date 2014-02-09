@@ -18,6 +18,13 @@ private:
 public:
 	CameraGimble(char verticalServoChannel, char horizontalServoChannel);
 	void InitDefaultCommand();
+	void moveCamearaUp_1Degree();
+	void moveCamearaDown_1Degree();
+	void moveCamearaLeft_1Degree();
+	void moveCamearaRight_1Degree();
+	void positionHomeCamera();
+	void positionAimCamera();
+	void positionLoaderCamera();
 };
 
 #endif

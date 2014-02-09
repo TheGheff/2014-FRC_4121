@@ -29,6 +29,8 @@ void _GLOBAL__I__ZN16ExampleSubsystemC2Ev();
 
 void _GLOBAL__I__ZN16autocmdDoNothingC2Ev();
 
+void _GLOBAL__I__ZN16cmdEmergencyStopC2Ev();
+
 void _GLOBAL__I__ZN16cmdPullBackWinchC2Ev();
 
 void _GLOBAL__I__ZN17cmdActivateLoaderC2Ev();
@@ -54,8 +56,6 @@ void _GLOBAL__I__ZN22cmdExtendLoaderCommandC2Ev();
 void _GLOBAL__I__ZN23cmdRetractLoaderCommandC2Ev();
 
 void _GLOBAL__I__ZN2OIC2Ev();
-
-void _GLOBAL__I__ZN3cmdC2Ev();
 
 void _GLOBAL__I__ZN7ChassisC2Ev();
 
@@ -125,6 +125,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN15cmdReleaseWinchC2Ev,
     _GLOBAL__I__ZN16ExampleSubsystemC2Ev,
     _GLOBAL__I__ZN16autocmdDoNothingC2Ev,
+    _GLOBAL__I__ZN16cmdEmergencyStopC2Ev,
     _GLOBAL__I__ZN16cmdPullBackWinchC2Ev,
     _GLOBAL__I__ZN17cmdActivateLoaderC2Ev,
     _GLOBAL__I__ZN17cmdExampleCommandC2Ev,
@@ -138,7 +139,6 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN22cmdExtendLoaderCommandC2Ev,
     _GLOBAL__I__ZN23cmdRetractLoaderCommandC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
-    _GLOBAL__I__ZN3cmdC2Ev,
     _GLOBAL__I__ZN7ChassisC2Ev,
     _GLOBAL__I__ZN12PrintCommandC2EPKc,
     _GLOBAL__I__ZN9Scheduler9_instanceE,
@@ -191,6 +191,8 @@ void _GLOBAL__D__ZN16ExampleSubsystemC2Ev();
 
 void _GLOBAL__D__ZN16autocmdDoNothingC2Ev();
 
+void _GLOBAL__D__ZN16cmdEmergencyStopC2Ev();
+
 void _GLOBAL__D__ZN16cmdPullBackWinchC2Ev();
 
 void _GLOBAL__D__ZN17cmdActivateLoaderC2Ev();
@@ -216,8 +218,6 @@ void _GLOBAL__D__ZN22cmdExtendLoaderCommandC2Ev();
 void _GLOBAL__D__ZN23cmdRetractLoaderCommandC2Ev();
 
 void _GLOBAL__D__ZN2OIC2Ev();
-
-void _GLOBAL__D__ZN3cmdC2Ev();
 
 void _GLOBAL__D__ZN7ChassisC2Ev();
 
@@ -277,6 +277,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN15cmdReleaseWinchC2Ev,
     _GLOBAL__D__ZN16ExampleSubsystemC2Ev,
     _GLOBAL__D__ZN16autocmdDoNothingC2Ev,
+    _GLOBAL__D__ZN16cmdEmergencyStopC2Ev,
     _GLOBAL__D__ZN16cmdPullBackWinchC2Ev,
     _GLOBAL__D__ZN17cmdActivateLoaderC2Ev,
     _GLOBAL__D__ZN17cmdExampleCommandC2Ev,
@@ -290,7 +291,6 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN22cmdExtendLoaderCommandC2Ev,
     _GLOBAL__D__ZN23cmdRetractLoaderCommandC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,
-    _GLOBAL__D__ZN3cmdC2Ev,
     _GLOBAL__D__ZN7ChassisC2Ev,
     _GLOBAL__D__ZN9Scheduler9_instanceE,
     _GLOBAL__D_wpi_error_s_ModuleIndexOutOfRange,

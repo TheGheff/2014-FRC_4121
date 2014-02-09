@@ -59,7 +59,7 @@ OI::OI() {
 	
 	//stop everything on robot
 	stopAll = new JoystickButton(driveStickR,RIGHT_SIDE_UP);
-	stopAll->WhenPressed(new cmd());
+	stopAll->WhenPressed(new cmdEmergencyStop());
 
 }
 
@@ -67,6 +67,9 @@ DriverStationLCD* OI::getDriverStation() {
 	return dsLCD;
 }
 
+Joystick* OI::getcameraControlStick() {
+	return cameraControlStick;
+}
 
 Joystick* OI::getDriveStickL() {
 	return driveStickL;
