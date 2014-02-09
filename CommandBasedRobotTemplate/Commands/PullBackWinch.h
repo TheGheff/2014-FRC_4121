@@ -8,11 +8,11 @@
  *
  * @author ExampleAuthor
  */
-class PullBackWinch: public CommandBase {
+class cmdPullBackWinch: public CommandBase {
 private:
 	DriverStationLCDSystem *dsLCDSystem;
 public:
-	PullBackWinch();
+	cmdPullBackWinch();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

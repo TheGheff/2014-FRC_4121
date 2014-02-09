@@ -12,8 +12,8 @@ class WinchSubsystem: public Subsystem {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
-	DoubleSolenoids *sol1;
-	Jaguar *winchMotor;
+	DoubleSolenoid *sol1;
+	Victor *winchMotor;
 	DigitalInput *retractLimitSwitch, *extendLimitSwitch;
 public:
 	WinchSubsystem();

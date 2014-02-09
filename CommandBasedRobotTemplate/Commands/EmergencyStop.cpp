@@ -1,6 +1,6 @@
 #include "EmergencyStop.h"
 
-EmergencyStop::EmergencyStop() {
+cmd::cmd() {
 	// Use requires() here to declare subsystem dependencies
 	Requires(loaderSubsystem);
 	Requires(chassis);
@@ -10,13 +10,13 @@ EmergencyStop::EmergencyStop() {
 }
 
 // Called just before this Command runs the first time
-void EmergencyStop::Initialize() {
+void cmd::Initialize() {
 	
 	
 }
 
 // Called repeatedly when this Command is scheduled to run
-void EmergencyStop::Execute() {
+void cmd::Execute() {
 	loaderSubsystem->StopEverything();
 	chassis->StopEverything();
 	//RelaySubsystem->Off();
@@ -24,13 +24,13 @@ void EmergencyStop::Execute() {
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool EmergencyStop::IsFinished() {
+bool cmd::IsFinished() {
 	//printf("IsFinished\n");
 	return TRUE;
 }
 
 // Called once after isFinished returns true
-void EmergencyStop::End() {
+void cmd::End() {
 	printf("End\n");
 	//winchSubsystem->Release();
 	//loaderSubsystem->StopEverything();
@@ -38,7 +38,7 @@ void EmergencyStop::End() {
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void EmergencyStop::Interrupted() {
+void cmd::Interrupted() {
 	printf("Interrupted\n");
 	//loaderSubsystem->StopEverything();
 }

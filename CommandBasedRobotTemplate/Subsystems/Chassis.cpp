@@ -23,7 +23,7 @@ Chassis::Chassis() : Subsystem("Chassis") {
 void Chassis::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
 	//SetDefaultCommand(new MySpecialCommand());
-	SetDefaultCommand(new DriveWithJoystick());
+	SetDefaultCommand(new cmdDriveWithJoystick());
 }
 
 // Put methods for controlling this subsystem

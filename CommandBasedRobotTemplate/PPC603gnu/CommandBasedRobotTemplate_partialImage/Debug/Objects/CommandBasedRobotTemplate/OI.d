@@ -400,6 +400,7 @@
   C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/LoaderSubsystem.h \
   C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../OI.h \
   C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/CameraSubsystem.h \
+  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/AutonomusModeSwitches.h \
   C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/PrecisionDrive.h \
   C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/ExtendLoaderCommand.h \
   C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/RetractLoaderCommand.h \
@@ -1209,6 +1210,8 @@ C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsy
 C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../OI.h:
 
 C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/CameraSubsystem.h:
+
+C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/AutonomusModeSwitches.h:
 
 C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/PrecisionDrive.h:
 

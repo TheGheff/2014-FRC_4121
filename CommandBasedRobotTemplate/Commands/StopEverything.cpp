@@ -1,29 +1,29 @@
 #include "StopEverything.h"
 
-StopEverything::StopEverything() {
+cmdStopEverything::cmdStopEverything() {
 	// Use requires() here to declare subsystem dependencies
 	Requires(loaderSubsystem);
 }
 
 // Called just before this Command runs the first time
-void StopEverything::Initialize() {
+void cmdStopEverything::Initialize() {
 	
 	
 }
 
 // Called repeatedly when this Command is scheduled to run
-void StopEverything::Execute() {
+void cmdStopEverything::Execute() {
 	loaderSubsystem->StopEverything();
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool StopEverything::IsFinished() {
+bool cmdStopEverything::IsFinished() {
 	//printf("IsFinished\n");
 	return TRUE;
 }
 
 // Called once after isFinished returns true
-void StopEverything::End() {
+void cmdStopEverything::End() {
 	printf("End\n");
 	//winchSubsystem->Release();
 	//loaderSubsystem->StopEverything();
@@ -31,7 +31,7 @@ void StopEverything::End() {
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void StopEverything::Interrupted() {
+void cmdStopEverything::Interrupted() {
 	printf("Interrupted\n");
 	//loaderSubsystem->StopEverything();
 }

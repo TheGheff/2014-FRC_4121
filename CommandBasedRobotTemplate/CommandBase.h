@@ -10,6 +10,7 @@
 #include "Subsystems/LoaderSubsystem.h"
 #include "OI.h"
 #include "Subsystems/CameraSubsystem.h"
+#include "Subsystems/AutonomusModeSwitches.h"
 
 
 /**
@@ -24,8 +25,7 @@ public:
 	static void init();
 	// Create a single static instance of all of your subsystems
 	static ExampleSubsystem *examplesubsystem;
-	static RelaySubsystem *extendLoaderRelay;
-	static RelaySubsystem *retractLoaderRelay;
+	static AutonomusModeSwitches *autonomousModeSwitches;
 	static DriverStationLCDSystem *driverStationLCDSystem;
 	static WinchSubsystem *winchSubsystem;
 	static Chassis *chassis;

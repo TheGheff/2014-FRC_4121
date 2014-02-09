@@ -8,9 +8,9 @@
  *
  * @author 322Programmer
  */
-class PrecisionDrive: public CommandBase {
+class cmdPrecisionDrive: public CommandBase {
 public:
-	PrecisionDrive();
+	cmdPrecisionDrive();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

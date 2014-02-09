@@ -1,15 +1,23 @@
 #include "WPILib.h"
 #include "Commands/Command.h"
-#include "Commands/ExampleCommand.h"
+#include "Commands/AutonomousScheduler.h"
 #include "CommandBase.h"
+#include "Robotmap.h"
 
 class CommandBasedRobot : public IterativeRobot {
 private:
 	Command *autonomousCommand;
+	Compressor *mainCompressor;
+
 	
 	virtual void RobotInit() {
 		CommandBase::init();
-		autonomousCommand = new ExampleCommand();	//DEFINE COMMANDS HERE
+		mainCompressor = new Compressor(COMPRESSOR_PRESSURE_SWITCH, COMPRESSOR_RELAY);
+		autonomousCommand = new cmdAutonomousScheduler();	//DEFINE COMMANDS HERE
+		mainCompressor->Start();
+		CommandBase::loaderSubsystem->StopEverything();
+		CommandBase::loaderSubsystem->StopEverything();
+		CommandBase::winchSubsystem->StopEverything();
 	}
 	
 	virtual void AutonomousInit() {

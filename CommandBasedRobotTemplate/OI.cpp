@@ -29,9 +29,9 @@ OI::OI() {
 	
 	//Winch Setup
 	retractWinch = new JoystickButton(driveStickR, THUMB_BUTTON_DOWN);
-	retractWinch->WhenPressed(new PullBackWinch());
+	retractWinch->WhenPressed(new cmdPullBackWinch());
 	releaseWinch = new JoystickButton(driveStickR, THUMB_BUTTON_UP);
-	releaseWinch->WhenPressed(new ReleaseWinch());
+	releaseWinch->WhenPressed(new cmdReleaseWinch());
 
 	//Left Joystick
 	driveStickL = new Joystick(JOYSTICKLEFT);
@@ -42,24 +42,24 @@ OI::OI() {
 	
 	//Loader Solenoid
 	loaderSolenoidUp = new JoystickButton(driveStickR, LEFT_SIDE_UP);
-	loaderSolenoidUp->WhenPressed(new ExtendLoaderCommand());
+	loaderSolenoidUp->WhenPressed(new cmdExtendLoaderCommand());
 	loaderSolenoidDown = new JoystickButton(driveStickR, LEFT_SIDE_DOWN);
-	loaderSolenoidDown->WhenPressed(new RetractLoaderCommand());
+	loaderSolenoidDown->WhenPressed(new cmdRetractLoaderCommand());
 	
 	//runs the loader motor to bring ball in
 	loaderIngestButton = new JoystickButton(driveStickL,THUMB_BUTTON_LEFT);
-	loaderIngestButton->WhenPressed(new ActivateLoader());
+	loaderIngestButton->WhenPressed(new cmdActivateLoader());
 	//runs the loader motor to spit ball out
 	loaderEjectButton = new JoystickButton(driveStickL,THUMB_BUTTON_RIGHT);
-	loaderEjectButton->WhenPressed(new EjectLoader());
+	loaderEjectButton->WhenPressed(new cmdEjectLoader());
 	//stops the loader motor
 	loaderStopButton = new JoystickButton(driveStickL,THUMB_BUTTON_UP);
-	loaderStopButton->WhenPressed(new StopEverything());
+	loaderStopButton->WhenPressed(new cmdStopEverything());
 	//loaderButton->WhenReleas ed(new DeactivateLoader());
 	
 	//stop everything on robot
 	stopAll = new JoystickButton(driveStickR,RIGHT_SIDE_UP);
-	stopAll->WhenPressed(new EmergencyStop());
+	stopAll->WhenPressed(new cmd());
 
 }
 

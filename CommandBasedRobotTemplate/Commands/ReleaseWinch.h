@@ -8,9 +8,9 @@
  *
  * @author ExampleAuthor
  */
-class ReleaseWinch: public CommandBase {
+class cmdReleaseWinch: public CommandBase {
 public:
-	ReleaseWinch();
+	cmdReleaseWinch();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

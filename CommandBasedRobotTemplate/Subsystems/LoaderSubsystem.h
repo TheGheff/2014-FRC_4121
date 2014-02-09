@@ -13,7 +13,7 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 
-	Jaguar *feederMotor;
+	Victor *feederMotor;
 	DigitalInput *retractLimitSwitch, *extendLimitSwitch;
 	DoubleSolenoid *loaderSol;
 

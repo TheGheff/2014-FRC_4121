@@ -4,7 +4,7 @@
 WinchSubsystem::WinchSubsystem() : Subsystem("WinchSubsystem") {
 	//this is the constructor
 	sol1 = new DoubleSolenoid(2,3);//channels (the buttons used to retract and release winch)
-	winchMotor = new Jaguar(WINCHMOTOR);
+	winchMotor = new Victor(WINCHMOTOR);
 //	feederMotor = new Jaguar(FEEDERMOTOR);
 	retractLimitSwitch = new DigitalInput(WINCH_RETRACT_LIMIT_SWITCH_I);
 	extendLimitSwitch = new DigitalInput(WINCH_EXTEND_LIMIT_SWITCH_I);

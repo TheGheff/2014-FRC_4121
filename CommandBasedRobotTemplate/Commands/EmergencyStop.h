@@ -8,9 +8,9 @@
  *
  * @author Vaughn
  */
-class EmergencyStop: public CommandBase {
+class cmd: public CommandBase {
 public:
-	EmergencyStop();
+	cmd();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

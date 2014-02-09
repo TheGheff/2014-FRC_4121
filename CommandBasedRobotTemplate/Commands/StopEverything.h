@@ -8,9 +8,9 @@
  *
  * @author Vaughn
  */
-class StopEverything: public CommandBase {
+class cmdStopEverything: public CommandBase {
 public:
-	StopEverything();
+	cmdStopEverything();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

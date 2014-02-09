@@ -8,9 +8,9 @@
  *
  * @author Vaughn
  */
-class DeactivateLoader: public CommandBase {
+class cmdDeactivateLoader: public CommandBase {
 public:
-	DeactivateLoader();
+	cmdDeactivateLoader();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

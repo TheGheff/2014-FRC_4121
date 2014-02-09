@@ -8,9 +8,9 @@
  *
  * @author Vaughn
  */
-class EjectLoader: public CommandBase {
+class cmdEjectLoader: public CommandBase {
 public:
-	EjectLoader();
+	cmdEjectLoader();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

@@ -4,7 +4,7 @@
 LoaderSubsystem::LoaderSubsystem() : Subsystem("LoaderSubsystem") {
 	//this is the constructor
 
-	feederMotor = new Jaguar(FEEDERMOTOR);
+	feederMotor = new Victor(FEEDERMOTOR);
 	retractLimitSwitch = new DigitalInput(LOADER_RETRACT_LIMIT_SWITCH_I);
 	extendLimitSwitch = new DigitalInput(LOADER_EXTEND_LIMIT_SWITCH_I);
 	loaderSol = new DoubleSolenoid(4,5);//channels
@@ -17,17 +17,17 @@ void LoaderSubsystem::InitDefaultCommand() {
 }
 
 void LoaderSubsystem::RunLoader() {
-	feederMotor->SetSpeed(-.5);
+	feederMotor->Set(-.5, 0);//SetSpeed(-.5);
 }
 
 void LoaderSubsystem::Eject(){
 
-	feederMotor->SetSpeed(.5);
+	feederMotor->Set(.5, 0);//SetSpeed(.5);
 	
 }
 
 void LoaderSubsystem::StopEverything(){
-	feederMotor->SetSpeed(0);//winch motor stops running
+	feederMotor->Set(-0, 0);//SetSpeed(0);//winch motor stops running
 	loaderSol->Set(DoubleSolenoid::kOff);
 }
 

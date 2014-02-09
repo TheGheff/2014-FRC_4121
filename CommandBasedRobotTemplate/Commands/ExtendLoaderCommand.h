@@ -8,9 +8,9 @@
  *
  * @author ExampleAuthor
  */
-class ExtendLoaderCommand: public CommandBase {
+class cmdExtendLoaderCommand: public CommandBase {
 public:
-	ExtendLoaderCommand();
+	cmdExtendLoaderCommand();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

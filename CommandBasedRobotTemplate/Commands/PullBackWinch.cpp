@@ -1,48 +1,38 @@
 #include "PullBackWinch.h"
 
-PullBackWinch::PullBackWinch() {
+cmdPullBackWinch::cmdPullBackWinch() {
 	// Use requires() here to declare subsystem dependencies
 	//requires(examplesubsystem)
 }
 
 // Called just before this Command runs the first time
-void PullBackWinch::Initialize() {
+void cmdPullBackWinch::Initialize() {
 	printf("Initialize\n");
 	
 }
 
 // Called repeatedly when this Command is scheduled to run
-void PullBackWinch::Execute() {
+void cmdPullBackWinch::Execute() {
 	printf("Execute\n");
 	//dsLCD->testUpdate("PullBackWinch::exe");
 	winchSubsystem->Retract();
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool PullBackWinch::IsFinished() {
+bool cmdPullBackWinch::IsFinished() {
 	//printf("IsFinished\n");
-	bool ret_val = false;
-	if (winchSubsystem->ReadWinchRetractLimitSwitch())
-	{
-	//	winchSubsystem->RetractHold();
-		ret_val = true;
-	}
-	else
-	{
-		ret_val = false;
-	}
-	return ret_val;//false;
+	return (winchSubsystem->ReadWinchRetractLimitSwitch());//false;
 }
 
 // Called once after isFinished returns true
-void PullBackWinch::End() {
+void cmdPullBackWinch::End() {
 	printf("End\n");
-	//winchSubsystem->Release();
+	winchSubsystem->RetractHold();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void PullBackWinch::Interrupted() {
+void cmdPullBackWinch::Interrupted() {
 	printf("Interrupted\n");
 	winchSubsystem->StopEverything();
 }

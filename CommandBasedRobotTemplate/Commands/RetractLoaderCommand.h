@@ -8,9 +8,9 @@
  *
  * @author ExampleAuthor
  */
-class RetractLoaderCommand: public CommandBase {
+class cmdRetractLoaderCommand: public CommandBase {
 public:
-	RetractLoaderCommand();
+	cmdRetractLoaderCommand();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

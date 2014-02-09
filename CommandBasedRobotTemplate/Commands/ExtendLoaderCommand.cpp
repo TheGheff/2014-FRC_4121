@@ -1,34 +1,31 @@
 #include "ExtendLoaderCommand.h"
 
-ExtendLoaderCommand::ExtendLoaderCommand() {
+cmdExtendLoaderCommand::cmdExtendLoaderCommand() {
 	// Use requires() here to declare subsystem dependencies
 	//requires(examplesubsystem)
 }
 
 // Called just before this Command runs the first time
-void ExtendLoaderCommand::Initialize() {
+void cmdExtendLoaderCommand::Initialize() {
 	printf("Initialize\n");
 	//SetTimeout(5);
 	//loaderRelay->On();
 }
 
 // Called repeatedly when this Command is scheduled to run
-void ExtendLoaderCommand::Execute() {
-	
-	while(!loaderSubsystem->ReadLoaderExtendLimitSwitch()){
-		loaderSubsystem->LowerLoader();
-	}
-	End();
+void cmdExtendLoaderCommand::Execute() {
+
+	loaderSubsystem->LowerLoader();
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool ExtendLoaderCommand::IsFinished() {
+bool cmdExtendLoaderCommand::IsFinished() {
 	printf("IsFinished\n");
-	return TRUE;//IsTimedOut();
+	return loaderSubsystem->ReadLoaderExtendLimitSwitch();//IsTimedOut();
 }
 
 // Called once after isFinished returns true
-void ExtendLoaderCommand::End() {
+void cmdExtendLoaderCommand::End() {
 	
 	loaderSubsystem->StopLoader();
 //	extendRelay->Off();
@@ -36,7 +33,7 @@ void ExtendLoaderCommand::End() {
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void ExtendLoaderCommand::Interrupted() {
+void cmdExtendLoaderCommand::Interrupted() {
 	printf("Interrupted\n");
 //	extendRelay->Off();
 }

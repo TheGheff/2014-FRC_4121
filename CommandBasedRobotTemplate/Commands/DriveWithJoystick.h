@@ -8,9 +8,9 @@
  *
  * @author 322Programmer
  */
-class DriveWithJoystick: public CommandBase {
+class cmdDriveWithJoystick: public CommandBase {
 public:
-	DriveWithJoystick();
+	cmdDriveWithJoystick();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

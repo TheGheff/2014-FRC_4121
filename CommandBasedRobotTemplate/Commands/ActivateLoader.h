@@ -8,9 +8,9 @@
  *
  * @author Vaughn
  */
-class ActivateLoader: public CommandBase {
+class cmdActivateLoader: public CommandBase {
 public:
-	ActivateLoader();
+	cmdActivateLoader();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

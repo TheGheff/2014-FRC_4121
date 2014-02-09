@@ -385,7 +385,7 @@
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Vision/ColorImage.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPIErrors.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/ExampleCommand.h \
+  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/AutonomousScheduler.h \
   C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../CommandBase.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h \
   C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/ExampleSubsystem.h \
@@ -399,7 +399,9 @@
   C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../OI.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
   C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/CameraSubsystem.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/CommandBase.h
+  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/AutonomusModeSwitches.h \
+  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/CommandBase.h \
+  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Robotmap.h
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
@@ -1169,7 +1171,7 @@ C:/WindRiver/vxworks-6.3/target/h/WPILib/WPIErrors.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/ExampleCommand.h:
+C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/AutonomousScheduler.h:
 
 C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../CommandBase.h:
 
@@ -1197,4 +1199,8 @@ C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
 C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/CameraSubsystem.h:
 
+C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/AutonomusModeSwitches.h:
+
 C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/CommandBase.h:
+
+C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Robotmap.h:

@@ -399,6 +399,7 @@
   C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Subsystems/../Commands/../OI.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
   C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Subsystems/../Commands/../Subsystems/CameraSubsystem.h \
+  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Subsystems/../Commands/../Subsystems/AutonomusModeSwitches.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/RobotDrive.h
 
 C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Subsystems/Chassis.h:
@@ -1196,5 +1197,7 @@ C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Subsystems/../Com
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
 C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Subsystems/../Commands/../Subsystems/CameraSubsystem.h:
+
+C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Subsystems/../Commands/../Subsystems/AutonomusModeSwitches.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/RobotDrive.h:

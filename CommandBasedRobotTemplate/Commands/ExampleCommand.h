@@ -8,9 +8,9 @@
  *
  * @author ExampleAuthor
  */
-class ExampleCommand: public CommandBase {
+class cmdExampleCommand: public CommandBase {
 public:
-	ExampleCommand();
+	cmdExampleCommand();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
