@@ -1,14 +1,15 @@
 #include "LoaderSubsystem.h"
 #include "../Robotmap.h"
-
+#include "DoubleSolenoid.h"
+//#include "../CommandBase.h"
 LoaderSubsystem::LoaderSubsystem() : Subsystem("LoaderSubsystem") {
 	//this is the constructor
 
-	feederMotor = new Victor(FEEDERMOTOR);
+	feederMotor = new Jaguar(FEEDERMOTOR);
 	retractLimitSwitch = new DigitalInput(LOADER_RETRACT_LIMIT_SWITCH_I);
 	extendLimitSwitch = new DigitalInput(LOADER_EXTEND_LIMIT_SWITCH_I);
-	loaderSol = new DoubleSolenoid(4,5);//channels
-
+	loaderSol = new DoubleSolenoid(EXTEND_LOADER_RELAY,RETRACT_LOADER_RELAY);//channels
+	counter=0;
 }
     
 void LoaderSubsystem::InitDefaultCommand() {
@@ -17,18 +18,32 @@ void LoaderSubsystem::InitDefaultCommand() {
 }
 
 void LoaderSubsystem::RunLoader() {
-	feederMotor->Set(-.5, 0);//SetSpeed(-.5);
+	if(counter<200){
+		feederMotor->Set(-.8, 0);//SetSpeed(-.5);
+		counter++;
+	}
+	else{
+		feederMotor->Set(-.5, 0);
+		//driverStationLCDSystem->testUpdate("Over 200");
+	}
 }
 
 void LoaderSubsystem::Eject(){
-
-	feederMotor->Set(.5, 0);//SetSpeed(.5);
+	if(counter<200){
+		feederMotor->Set(.8, 0);//SetSpeed(-.5);
+		counter++;
+	}
+	else{
+		feederMotor->Set(.5, 0);
+		//driverStationLCDSystem->testUpdate("Count");
+	}
 	
 }
 
 void LoaderSubsystem::StopEverything(){
 	feederMotor->Set(-0, 0);//SetSpeed(0);//winch motor stops running
-	loaderSol->Set(DoubleSolenoid::kOff);
+	loaderSol->Set(loaderSol->kOff);
+	counter=0;
 }
 
 
@@ -41,15 +56,15 @@ bool LoaderSubsystem::ReadLoaderExtendLimitSwitch(){
 }
 
 void  LoaderSubsystem::RaiseLoader(){
-	loaderSol->Set(DoubleSolenoid::kReverse);
+	loaderSol->Set(loaderSol->kReverse);
 }
 
 void  LoaderSubsystem::LowerLoader(){
-	loaderSol->Set(DoubleSolenoid::kForward);
+	loaderSol->Set(loaderSol->kForward);
 }
 
 void  LoaderSubsystem::StopLoader(){
-	loaderSol->Set(DoubleSolenoid::kOff);
+	loaderSol->Set(loaderSol->kOff);
 }
 // Put methods for controlling this subsystem
 // here. Call these from Commands.

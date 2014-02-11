@@ -13,9 +13,10 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 
-	Victor *feederMotor;
+	Jaguar *feederMotor;
 	DigitalInput *retractLimitSwitch, *extendLimitSwitch;
 	DoubleSolenoid *loaderSol;
+	int counter;
 
 public:
 	LoaderSubsystem();

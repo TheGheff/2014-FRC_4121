@@ -13,7 +13,7 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 	DoubleSolenoid *sol1;
-	Victor *winchMotor;
+	Jaguar *winchMotor;
 	DigitalInput *retractLimitSwitch, *extendLimitSwitch;
 public:
 	WinchSubsystem();

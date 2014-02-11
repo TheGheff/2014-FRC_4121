@@ -22,7 +22,7 @@
 //#########  User Input Devices #########
 #define JOYSTICKRIGHT 	(1)
 #define JOYSTICKLEFT  	(2)
-#define JOYSTICKCAMERA  	(3)
+#define JOYSTICKCAMERA  (3)
 
 
 //######### Joystick Buttons  #########

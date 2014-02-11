@@ -6,10 +6,7 @@ AutonomusModeSwitches::AutonomusModeSwitches() : Subsystem("AutonomusModeSwitche
 	switch1 = new DigitalInput(DIO11);
 	switch2 = new DigitalInput(DIO12);
 	switch3 = new DigitalInput(DIO13);
-	switch4 = new DigitalInput(DIO14);
-	
-	
-	
+	switch4 = new DigitalInput(DIO14);	
 }
     
 void AutonomusModeSwitches::InitDefaultCommand() {
