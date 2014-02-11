@@ -54,9 +54,6 @@ typedef enum{
 	COMPRESSOR_RELAY,
 	RELAY_7,
 	RELAY_8,
-
-	
-	
 }RELAY_T;
 
 typedef enum{

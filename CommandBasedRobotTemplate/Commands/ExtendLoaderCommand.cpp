@@ -21,13 +21,13 @@ void cmdExtendLoaderCommand::Execute() {
 // Make this return true when this Command no longer needs to run execute()
 bool cmdExtendLoaderCommand::IsFinished() {
 	printf("IsFinished\n");
-	return loaderSubsystem->ReadLoaderExtendLimitSwitch();//IsTimedOut();
+	return TRUE;//loaderSubsystem->ReadLoaderExtendLimitSwitch();//IsTimedOut();
 }
 
 // Called once after isFinished returns true
 void cmdExtendLoaderCommand::End() {
 	
-	loaderSubsystem->StopLoader();
+	//loaderSubsystem->StopLoader();
 //	extendRelay->Off();
 }
 
