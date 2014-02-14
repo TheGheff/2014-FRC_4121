@@ -6,9 +6,10 @@ LoaderSubsystem::LoaderSubsystem() : Subsystem("LoaderSubsystem") {
 	//this is the constructor
 
 	feederMotor = new Jaguar(FEEDERMOTOR);
-	retractLimitSwitch = new DigitalInput(LOADER_RETRACT_LIMIT_SWITCH_I);
-	extendLimitSwitch = new DigitalInput(LOADER_EXTEND_LIMIT_SWITCH_I);
-	loaderSol = new DoubleSolenoid(EXTEND_LOADER_RELAY,RETRACT_LOADER_RELAY);//channels
+//	retractLimitSwitch = new DigitalInput(LOADER_RETRACT_LIMIT_SWITCH_I);
+//	extendLimitSwitch = new DigitalInput(LOADER_EXTEND_LIMIT_SWITCH_I);
+//	loaderSol = new DoubleSolenoid(EXTEND_LOADER_RELAY, RETRACT_LOADER_RELAY);//channels
+	loaderSol = new DoubleSolenoid(4, 5);
 	counter=0;
 }
     
@@ -18,26 +19,13 @@ void LoaderSubsystem::InitDefaultCommand() {
 }
 
 void LoaderSubsystem::RunLoader() {
-	if(counter<200){
-		feederMotor->Set(-.8, 0);//SetSpeed(-.5);
-		counter++;
-	}
-	else{
-		feederMotor->Set(-.5, 0);
+		feederMotor->Set(-1, 0);
 		//driverStationLCDSystem->testUpdate("Over 200");
-	}
 }
 
 void LoaderSubsystem::Eject(){
-	if(counter<200){
-		feederMotor->Set(.8, 0);//SetSpeed(-.5);
-		counter++;
-	}
-	else{
-		feederMotor->Set(.5, 0);
+		feederMotor->Set(1, 0);
 		//driverStationLCDSystem->testUpdate("Count");
-	}
-	
 }
 
 void LoaderSubsystem::StopEverything(){
@@ -46,7 +34,7 @@ void LoaderSubsystem::StopEverything(){
 	counter=0;
 }
 
-
+/*
 bool LoaderSubsystem::ReadLoaderRetractLimitSwitch(){
 	return retractLimitSwitch->Get();
 }
@@ -54,7 +42,7 @@ bool LoaderSubsystem::ReadLoaderRetractLimitSwitch(){
 bool LoaderSubsystem::ReadLoaderExtendLimitSwitch(){
 	return extendLimitSwitch->Get();
 }
-
+*/
 void  LoaderSubsystem::RaiseLoader(){
 	loaderSol->Set(loaderSol->kReverse);
 }

@@ -8,7 +8,7 @@ cmdReleaseWinch::cmdReleaseWinch() {
 // Called just before this Command runs the first time
 void cmdReleaseWinch::Initialize() {
 	printf("Initialize\n");
-	winchSubsystem->Retract();
+//	winchSubsystem->Retract();
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -16,6 +16,7 @@ void cmdReleaseWinch::Execute() {
 	printf("Execute\n");
 	DriverStationLCD *ds = DriverStationLCD::GetInstance();
 	ds->PrintfLine(DriverStationLCD::kUser_Line2, "Execute");
+	winchSubsystem->Release();
 	
 }
 
@@ -28,12 +29,10 @@ bool cmdReleaseWinch::IsFinished() {
 // Called once after isFinished returns true
 void cmdReleaseWinch::End() {
 	printf("End\n");
-	winchSubsystem->Release();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void cmdReleaseWinch::Interrupted() {
 	printf("Interrupted\n");
-	winchSubsystem->Release();
 }

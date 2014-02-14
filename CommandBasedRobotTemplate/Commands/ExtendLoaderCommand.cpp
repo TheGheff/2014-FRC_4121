@@ -2,14 +2,12 @@
 
 cmdExtendLoaderCommand::cmdExtendLoaderCommand() {
 	// Use requires() here to declare subsystem dependencies
-	//requires(examplesubsystem)
+	Requires(loaderSubsystem);
 }
 
 // Called just before this Command runs the first time
 void cmdExtendLoaderCommand::Initialize() {
 	printf("Initialize\n");
-	//SetTimeout(5);
-	//loaderRelay->On();
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -21,7 +19,7 @@ void cmdExtendLoaderCommand::Execute() {
 // Make this return true when this Command no longer needs to run execute()
 bool cmdExtendLoaderCommand::IsFinished() {
 	printf("IsFinished\n");
-	return TRUE;//loaderSubsystem->ReadLoaderExtendLimitSwitch();//IsTimedOut();
+	return true;//loaderSubsystem->ReadLoaderExtendLimitSwitch();//IsTimedOut();
 }
 
 // Called once after isFinished returns true

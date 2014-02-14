@@ -7,6 +7,7 @@
 #include "Commands/RetractLoaderCommand.h"
 #include "Commands/PullBackWinch.h"
 #include "Commands/ReleaseWinch.h"
+#include "Commands/HoldWinch.h"
 #include "Commands/ToggleDrive.h"
 #include "Commands/ActivateLoader.h"
 #include "Commands/DeactivateLoader.h"
@@ -30,6 +31,8 @@ OI::OI() {
 	//Winch Setup
 	retractWinch = new JoystickButton(driveStickR, THUMB_BUTTON_DOWN);
 	retractWinch->WhenPressed(new cmdPullBackWinch());
+	retractWinch->WhenReleased (new cmdHoldWinch());
+	
 	releaseWinch = new JoystickButton(driveStickR, THUMB_BUTTON_UP);
 	releaseWinch->WhenPressed(new cmdReleaseWinch());
 

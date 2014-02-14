@@ -13,6 +13,8 @@ void _GLOBAL__I__ZN11CommandBaseC2EPKc();
 
 void _GLOBAL__I__ZN12CameraGimbleC2Ecc();
 
+void _GLOBAL__I__ZN12cmdHoldWinchC2Ev();
+
 void _GLOBAL__I__ZN14RelaySubsystemC2Ec();
 
 void _GLOBAL__I__ZN14WinchSubsystemC2Ev();
@@ -117,6 +119,7 @@ void (*_ctors[])() =
     _GLOBAL__I__Z20FRC_userClassFactoryv,
     _GLOBAL__I__ZN11CommandBaseC2EPKc,
     _GLOBAL__I__ZN12CameraGimbleC2Ecc,
+    _GLOBAL__I__ZN12cmdHoldWinchC2Ev,
     _GLOBAL__I__ZN14RelaySubsystemC2Ec,
     _GLOBAL__I__ZN14WinchSubsystemC2Ev,
     _GLOBAL__I__ZN14cmdEjectLoaderC2Ev,
@@ -174,6 +177,8 @@ void _GLOBAL__D__Z20FRC_userClassFactoryv();
 void _GLOBAL__D__ZN11CommandBaseC2EPKc();
 
 void _GLOBAL__D__ZN12CameraGimbleC2Ecc();
+
+void _GLOBAL__D__ZN12cmdHoldWinchC2Ev();
 
 void _GLOBAL__D__ZN14RelaySubsystemC2Ec();
 
@@ -269,6 +274,7 @@ void (*_dtors[])() =
     _GLOBAL__D__Z20FRC_userClassFactoryv,
     _GLOBAL__D__ZN11CommandBaseC2EPKc,
     _GLOBAL__D__ZN12CameraGimbleC2Ecc,
+    _GLOBAL__D__ZN12cmdHoldWinchC2Ev,
     _GLOBAL__D__ZN14RelaySubsystemC2Ec,
     _GLOBAL__D__ZN14WinchSubsystemC2Ev,
     _GLOBAL__D__ZN14cmdEjectLoaderC2Ev,

@@ -21,20 +21,20 @@ void cmdPullBackWinch::Execute() {
 // Make this return true when this Command no longer needs to run execute()
 bool cmdPullBackWinch::IsFinished() {
 	//printf("IsFinished\n");
-	return (winchSubsystem->ReadWinchRetractLimitSwitch());//false;
+	//return (winchSubsystem->ReadWinchRetractLimitSwitch());//false;
+	return true;
 }
 
 // Called once after isFinished returns true
 void cmdPullBackWinch::End() {
 	printf("End\n");
-	winchSubsystem->RetractHold();
+	//winchSubsystem->RetractHold();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void cmdPullBackWinch::Interrupted() {
 	printf("Interrupted\n");
-	winchSubsystem->StopEverything();
 }
 
 

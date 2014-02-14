@@ -15,6 +15,7 @@ private:
 	DoubleSolenoid *sol1;
 	Jaguar *winchMotor;
 	DigitalInput *retractLimitSwitch, *extendLimitSwitch;
+	
 public:
 	WinchSubsystem();
 	void InitDefaultCommand();

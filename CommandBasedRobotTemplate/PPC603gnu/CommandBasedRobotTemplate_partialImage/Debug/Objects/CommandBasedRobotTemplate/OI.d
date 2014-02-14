@@ -406,6 +406,7 @@
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/RetractLoaderCommand.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/PullBackWinch.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ReleaseWinch.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/HoldWinch.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ToggleDrive.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ActivateLoader.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/DeactivateLoader.h \
@@ -1222,6 +1223,8 @@ C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/RetractLoaderCommand.h
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/PullBackWinch.h:
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ReleaseWinch.h:
+
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/HoldWinch.h:
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ToggleDrive.h:
 

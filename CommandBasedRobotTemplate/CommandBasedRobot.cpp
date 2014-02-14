@@ -16,7 +16,6 @@ private:
 		autonomousCommand = new cmdAutonomousScheduler();	//DEFINE COMMANDS HERE
 		mainCompressor->Start();
 		CommandBase::loaderSubsystem->StopEverything();
-		CommandBase::loaderSubsystem->StopEverything();
 		CommandBase::winchSubsystem->StopEverything();
 	}
 	
