@@ -13,10 +13,10 @@ private:
 	
 	virtual void RobotInit() {
 		CommandBase::init();
-		mainCompressor = new Compressor(COMPRESSOR_PRESSURE_SWITCH, COMPRESSOR_RELAY);
+		mainCompressor = new Compressor(COMPRESSOR_PRESSURE_SWITCH, COMPRESSOR_RELAY);// COMPRESSOR_RELAY);
 		autonomousCommand = new cmdAutonomousScheduler();	//DEFINE COMMANDS HERE
 		mainCompressor->Start();
-		CommandBase::loaderSubsystem->StopEverything();
+		CommandBase::loaderSubsystem->LowerLoader();
 		CommandBase::winchSubsystem->StopEverything();
 	}
 	

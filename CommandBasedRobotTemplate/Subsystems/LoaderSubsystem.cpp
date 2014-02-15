@@ -13,11 +13,11 @@ void LoaderSubsystem::InitDefaultCommand() {
 }
 
 void LoaderSubsystem::RunLoader() {
-		feederMotor->Set(-1, 0);
+		feederMotor->Set(-.9, 0);
 }
 
 void LoaderSubsystem::Eject(){
-		feederMotor->Set(1, 0);
+		feederMotor->Set(.9, 0);
 }
 
 void LoaderSubsystem::StopEverything(){

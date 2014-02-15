@@ -13,27 +13,21 @@ void cmdDeactivateLoader::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void cmdDeactivateLoader::Execute() {
-	loaderSubsystem->RunLoader();
+	loaderSubsystem->StopEverything();
 }
 
 // Make this return true when this Command no longer needs to run execute()
 bool cmdDeactivateLoader::IsFinished() {
-	//printf("IsFinished\n");
-	return false;
+	return true;
 }
 
 // Called once after isFinished returns true
 void cmdDeactivateLoader::End() {
-	printf("End\n");
-	//winchSubsystem->Release();
-	loaderSubsystem->StopEverything();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void cmdDeactivateLoader::Interrupted() {
-	printf("Interrupted\n");
-	loaderSubsystem->StopEverything();
 }
 
 

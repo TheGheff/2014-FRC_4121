@@ -57,7 +57,7 @@ OI::OI() {
 	loaderEjectButton->WhenPressed(new cmdEjectLoader());
 	//stops the loader motor
 	loaderStopButton = new JoystickButton(driveStickL,THUMB_BUTTON_UP);
-	loaderStopButton->WhenPressed(new cmdStopEverything());
+	loaderStopButton->WhenPressed(new cmdDeactivateLoader());
 	//loaderButton->WhenReleas ed(new DeactivateLoader());
 	
 	//stop everything on robot
