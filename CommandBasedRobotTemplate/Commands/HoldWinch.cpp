@@ -8,15 +8,11 @@ cmdHoldWinch::cmdHoldWinch() {
 // Called just before this Command runs the first time
 void cmdHoldWinch::Initialize() {
 	printf("Initialize\n");
-	winchSubsystem->RetractHold();
 }
 
 // Called repeatedly when this Command is scheduled to run
 void cmdHoldWinch::Execute() {
-	printf("Execute\n");
-	DriverStationLCD *ds = DriverStationLCD::GetInstance();
-	ds->PrintfLine(DriverStationLCD::kUser_Line2, "Execute");
-	
+	winchSubsystem->RetractHold();
 }
 
 // Make this return true when this Command no longer needs to run execute()

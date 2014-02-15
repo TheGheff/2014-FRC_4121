@@ -1,6 +1,6 @@
  \
  CommandBasedRobotTemplate_partialImage/Debug/Objects/CommandBasedRobotTemplate/CommandBasedRobot.o:  \
- C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/CommandBasedRobot.cpp \
+ C:/WindRiver/workspace/CommandBasedRobotTemplate/CommandBasedRobot.cpp \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
   C:/WindRiver/vxworks-6.3/target/h/string.h \
   C:/WindRiver/vxworks-6.3/target/h/types/vxANSI.h \
@@ -385,24 +385,24 @@
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Vision/ColorImage.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPIErrors.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/AutonomousScheduler.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../CommandBase.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/AutonomousScheduler.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../CommandBase.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/ExampleSubsystem.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/ExampleSubsystem.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/RelaySubsystem.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/DriverStationLCDSystem.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/WinchSubsystem.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/Chassis.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/LoaderSubsystem.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../OI.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/RelaySubsystem.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/DriverStationLCDSystem.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/WinchSubsystem.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/Chassis.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/LoaderSubsystem.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../OI.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/CameraSubsystem.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/AutonomusModeSwitches.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/CommandBase.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Robotmap.h \
-  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/EmergencyStop.h
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/CameraSubsystem.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/AutonomusModeSwitches.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/CommandBase.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Robotmap.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/EmergencyStop.h
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
@@ -1172,38 +1172,38 @@ C:/WindRiver/vxworks-6.3/target/h/WPILib/WPIErrors.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/AutonomousScheduler.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/AutonomousScheduler.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../CommandBase.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../CommandBase.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/ExampleSubsystem.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/ExampleSubsystem.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/RelaySubsystem.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/RelaySubsystem.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/DriverStationLCDSystem.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/DriverStationLCDSystem.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/WinchSubsystem.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/WinchSubsystem.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/Chassis.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/Chassis.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/LoaderSubsystem.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/LoaderSubsystem.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../OI.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../OI.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/CameraSubsystem.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/CameraSubsystem.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/../Subsystems/AutonomusModeSwitches.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/AutonomusModeSwitches.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/CommandBase.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/CommandBase.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Robotmap.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Robotmap.h:
 
-C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Commands/EmergencyStop.h:
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/EmergencyStop.h:

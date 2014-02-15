@@ -11,7 +11,7 @@ void cmdPullBackWinch::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void cmdPullBackWinch::Execute() {
-	
+	//winchSubsystem->Retract();
 	switch(	CommandBase::loaderSubsystem->GetLoaderPosition())
 	{//is the loader clear
 		case DoubleSolenoid::kForward:
@@ -33,19 +33,19 @@ void cmdPullBackWinch::Execute() {
 bool cmdPullBackWinch::IsFinished() {
 	//Keep it going until the loader is in position
 			
-	return winchSubsystem->ReadWinchRetractLimitSwitch();
+	return true;//winchSubsystem->ReadWinchRetractLimitSwitch();
 }
 
 // Called once after isFinished returns true
 void cmdPullBackWinch::End() {
-	winchSubsystem->RetractHold();
+	//winchSubsystem->RetractHold();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void cmdPullBackWinch::Interrupted() {
 	//if another command interupts this one, go to safe state
-	winchSubsystem->RetractHold();
+	//winchSubsystem->RetractHold();
 }
 
 

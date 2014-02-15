@@ -44,9 +44,9 @@ OI::OI() {
 	precisionDriveButton->ToggleWhenPressed(new cmdToggleDrive());
 	
 	//Loader Solenoid
-	loaderSolenoidUp = new JoystickButton(driveStickR, LEFT_SIDE_UP);
+	loaderSolenoidUp = new JoystickButton(driveStickR, RIGHT_SIDE_UP);
 	loaderSolenoidUp->WhenPressed(new cmdExtendLoaderCommand());
-	loaderSolenoidDown = new JoystickButton(driveStickR, LEFT_SIDE_DOWN);
+	loaderSolenoidDown = new JoystickButton(driveStickR, RIGHT_SIDE_DOWN);
 	loaderSolenoidDown->WhenPressed(new cmdRetractLoaderCommand());
 	
 	//runs the loader motor to bring ball in
@@ -61,7 +61,7 @@ OI::OI() {
 	//loaderButton->WhenReleas ed(new DeactivateLoader());
 	
 	//stop everything on robot
-	stopAll = new JoystickButton(driveStickR,RIGHT_SIDE_UP);
+	stopAll = new JoystickButton(driveStickR,LEFT_SIDE_UP);
 	stopAll->WhenPressed(new cmdEmergencyStop());
 
 }
