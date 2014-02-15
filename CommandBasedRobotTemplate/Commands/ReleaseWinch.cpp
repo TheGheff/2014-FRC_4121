@@ -1,5 +1,4 @@
 #include "ReleaseWinch.h"
-
 cmdReleaseWinch::cmdReleaseWinch() {
 	// Use requires() here to declare subsystem dependencies
 	//requires(examplesubsystem)
@@ -7,32 +6,35 @@ cmdReleaseWinch::cmdReleaseWinch() {
 
 // Called just before this Command runs the first time
 void cmdReleaseWinch::Initialize() {
-	printf("Initialize\n");
-//	winchSubsystem->Retract();
 }
 
 // Called repeatedly when this Command is scheduled to run
 void cmdReleaseWinch::Execute() {
-	printf("Execute\n");
-	DriverStationLCD *ds = DriverStationLCD::GetInstance();
-	ds->PrintfLine(DriverStationLCD::kUser_Line2, "Execute");
-	winchSubsystem->Release();
+	switch(	CommandBase::loaderSubsystem->GetLoaderPosition())
+	{
+		case DoubleSolenoid::kForward:
+			winchSubsystem->Release();
+			break;
+		case DoubleSolenoid::kOff:
+			break;
+		case DoubleSolenoid::kReverse:
+			break;
+		default:
+			break;
+	}
 	
 }
 
 // Make this return true when this Command no longer needs to run execute()
 bool cmdReleaseWinch::IsFinished() {
-	printf("IsFinished\n");
 	return TRUE;
 }
 
 // Called once after isFinished returns true
 void cmdReleaseWinch::End() {
-	printf("End\n");
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void cmdReleaseWinch::Interrupted() {
-	printf("Interrupted\n");
 }

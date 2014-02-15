@@ -20,19 +20,14 @@ void cmdRetractLoaderCommand::Execute() {
 
 // Make this return true when this Command no longer needs to run execute()
 bool cmdRetractLoaderCommand::IsFinished() {
-	printf("IsFinished\n");
-	return TRUE;//loaderSubsystem->ReadLoaderRetractLimitSwitch();//IsTimedOut();
+	return TRUE;
 }
 
 // Called once after isFinished returns true
 void cmdRetractLoaderCommand::End() {
-	//loaderSubsystem->StopLoader();
-//	extendRelay->Off();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void cmdRetractLoaderCommand::Interrupted() {
-	printf("Interrupted\n");
-//	extendRelay->Off();
 }

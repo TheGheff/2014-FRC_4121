@@ -4,6 +4,7 @@
 #include "CommandBase.h"
 #include "Robotmap.h"
 
+#include "Commands/EmergencyStop.h"
 class CommandBasedRobot : public IterativeRobot {
 private:
 	Command *autonomousCommand;
@@ -33,6 +34,8 @@ private:
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
 		autonomousCommand->Cancel();
+		
+		cmdEmergencyStop(); //make sure everything is off and in a netral state when teleop starts.
 	}
 	
 	virtual void TeleopPeriodic() {

@@ -1,7 +1,7 @@
  \
  CommandBasedRobotTemplate_partialImage/Debug/Objects/CommandBasedRobotTemplate/Subsystems/WinchSubsystem.o:  \
- C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/WinchSubsystem.cpp \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/WinchSubsystem.h \
+ C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Subsystems/WinchSubsystem.cpp \
+  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Subsystems/WinchSubsystem.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/ErrorBase.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Base.h \
@@ -384,10 +384,10 @@
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Vision/HSLImage.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Vision/ColorImage.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPIErrors.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/../Robotmap.h \
+  C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Subsystems/../Robotmap.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/DoubleSolenoid.h
 
-C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/WinchSubsystem.h:
+C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Subsystems/WinchSubsystem.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h:
 
@@ -1153,6 +1153,6 @@ C:/WindRiver/vxworks-6.3/target/h/WPILib/Vision/ColorImage.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPIErrors.h:
 
-C:/WindRiver/workspace/CommandBasedRobotTemplate/Subsystems/../Robotmap.h:
+C:/WindRiver/workspace/2014-FRC_4121/CommandBasedRobotTemplate/Subsystems/../Robotmap.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/DoubleSolenoid.h:

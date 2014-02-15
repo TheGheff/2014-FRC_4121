@@ -29,6 +29,7 @@ public:
 	void RaiseLoader();
 	void LowerLoader();
 	void StopLoader();
+	DoubleSolenoid::Value GetLoaderPosition();
 };
 
 #endif

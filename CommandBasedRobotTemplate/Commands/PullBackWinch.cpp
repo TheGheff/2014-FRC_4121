@@ -7,34 +7,45 @@ cmdPullBackWinch::cmdPullBackWinch() {
 
 // Called just before this Command runs the first time
 void cmdPullBackWinch::Initialize() {
-	printf("Initialize\n");
-	
 }
 
 // Called repeatedly when this Command is scheduled to run
 void cmdPullBackWinch::Execute() {
-	printf("Execute\n");
-	//dsLCD->testUpdate("PullBackWinch::exe");
-	winchSubsystem->Retract();
+	
+	switch(	CommandBase::loaderSubsystem->GetLoaderPosition())
+	{//is the loader clear
+		case DoubleSolenoid::kForward:
+			//WE Hope.  It will be clear unless something got jammed
+			winchSubsystem->Retract();
+			break;
+		case DoubleSolenoid::kOff:
+			//We have no idea, do nothing to be safe
+			break;
+		case DoubleSolenoid::kReverse:
+			//Probably not, so do nothing cause something coule be bad.  Like really bad.
+			break;
+		default:
+			break;
+	}
 }
 
 // Make this return true when this Command no longer needs to run execute()
 bool cmdPullBackWinch::IsFinished() {
-	//printf("IsFinished\n");
-	//return (winchSubsystem->ReadWinchRetractLimitSwitch());//false;
-	return true;
+	//Keep it going until the loader is in position
+			
+	return winchSubsystem->ReadWinchRetractLimitSwitch();
 }
 
 // Called once after isFinished returns true
 void cmdPullBackWinch::End() {
-	printf("End\n");
-	//winchSubsystem->RetractHold();
+	winchSubsystem->RetractHold();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void cmdPullBackWinch::Interrupted() {
-	printf("Interrupted\n");
+	//if another command interupts this one, go to safe state
+	winchSubsystem->RetractHold();
 }
 
 
