@@ -25,43 +25,44 @@ OI::OI() {
 	cameraControlStick = new Joystick(JOYSTICKCAMERA); 
 
 	//Right Joystick
-	driveStickR = new Joystick(JOYSTICKRIGHT);
-	button1 = new JoystickButton(driveStickR, TRIGGER);
+	driveStickL = new Joystick(JOYSTICKLEFT);
+	button1 = new JoystickButton(driveStickL, TRIGGER);
 	
 	//Winch Setup
-	retractWinch = new JoystickButton(driveStickR, THUMB_BUTTON_DOWN);
+	retractWinch = new JoystickButton(driveStickL, THUMB_BUTTON_DOWN);
 	retractWinch->WhenPressed(new cmdPullBackWinch());
 	retractWinch->WhenReleased (new cmdHoldWinch());
 	
-	releaseWinch = new JoystickButton(driveStickR, THUMB_BUTTON_UP);
+	releaseWinch = new JoystickButton(driveStickL, THUMB_BUTTON_UP);
 	releaseWinch->WhenPressed(new cmdReleaseWinch());
 
 	//Left Joystick
-	driveStickL = new Joystick(JOYSTICKLEFT);
+	driveStickR = new Joystick(JOYSTICKRIGHT);
+	
 	
 	//Precision Drive
-	precisionDriveButton = new JoystickButton(driveStickL, THUMB_BUTTON_DOWN);
+	precisionDriveButton = new JoystickButton(driveStickR, THUMB_BUTTON_DOWN);
 	precisionDriveButton->ToggleWhenPressed(new cmdToggleDrive());
 	
 	//Loader Solenoid
-	loaderSolenoidUp = new JoystickButton(driveStickR, RIGHT_SIDE_UP);
+	loaderSolenoidUp = new JoystickButton(driveStickL, THUMB_BUTTON_LEFT);
 	loaderSolenoidUp->WhenPressed(new cmdExtendLoaderCommand());
-	loaderSolenoidDown = new JoystickButton(driveStickR, RIGHT_SIDE_DOWN);
+	loaderSolenoidDown = new JoystickButton(driveStickL, THUMB_BUTTON_RIGHT);
 	loaderSolenoidDown->WhenPressed(new cmdRetractLoaderCommand());
 	
 	//runs the loader motor to bring ball in
-	loaderIngestButton = new JoystickButton(driveStickL,THUMB_BUTTON_LEFT);
+	loaderIngestButton = new JoystickButton(driveStickR,THUMB_BUTTON_LEFT);
 	loaderIngestButton->WhenPressed(new cmdActivateLoader());
 	//runs the loader motor to spit ball out
-	loaderEjectButton = new JoystickButton(driveStickL,THUMB_BUTTON_RIGHT);
+	loaderEjectButton = new JoystickButton(driveStickR,THUMB_BUTTON_RIGHT);
 	loaderEjectButton->WhenPressed(new cmdEjectLoader());
 	//stops the loader motor
-	loaderStopButton = new JoystickButton(driveStickL,THUMB_BUTTON_UP);
+	loaderStopButton = new JoystickButton(driveStickR,THUMB_BUTTON_UP);
 	loaderStopButton->WhenPressed(new cmdDeactivateLoader());
 	//loaderButton->WhenReleas ed(new DeactivateLoader());
 	
 	//stop everything on robot
-	stopAll = new JoystickButton(driveStickR,LEFT_SIDE_UP);
+	stopAll = new JoystickButton(driveStickL,LEFT_SIDE_UP);
 	stopAll->WhenPressed(new cmdEmergencyStop());
 
 }
@@ -75,9 +76,9 @@ Joystick* OI::getcameraControlStick() {
 }
 
 Joystick* OI::getDriveStickL() {
-	return driveStickL;
+	return driveStickR;
 }
 
 Joystick* OI::getDriveStickR() {
-	return driveStickR;
+	return driveStickL;
 }

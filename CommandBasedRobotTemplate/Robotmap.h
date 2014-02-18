@@ -20,8 +20,8 @@
 
 
 //#########  User Input Devices #########
-#define JOYSTICKRIGHT 	(1)
-#define JOYSTICKLEFT  	(2)
+#define JOYSTICKRIGHT 	(2)
+#define JOYSTICKLEFT  	(1)
 #define JOYSTICKCAMERA  (3)
 
 

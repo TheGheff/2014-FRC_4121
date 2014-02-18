@@ -22,7 +22,6 @@ void LoaderSubsystem::Eject(){
 
 void LoaderSubsystem::StopEverything(){
 	feederMotor->Set(-0, 0);
-	loaderSol->Set(loaderSol->kOff);
 }
 
 void  LoaderSubsystem::RaiseLoader(){

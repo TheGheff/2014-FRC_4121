@@ -11,6 +11,8 @@
 class cmdPullBackWinch: public CommandBase {
 private:
 	DriverStationLCDSystem *dsLCDSystem;
+
+	bool should_exit;
 public:
 	cmdPullBackWinch();
 	virtual void Initialize();

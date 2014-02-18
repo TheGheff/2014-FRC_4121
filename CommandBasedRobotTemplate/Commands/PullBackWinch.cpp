@@ -17,12 +17,16 @@ void cmdPullBackWinch::Execute() {
 		case DoubleSolenoid::kForward:
 			//WE Hope.  It will be clear unless something got jammed
 			winchSubsystem->Retract();
+
+			should_exit = false;
 			break;
 		case DoubleSolenoid::kOff:
 			//We have no idea, do nothing to be safe
+			should_exit = TRUE;
 			break;
 		case DoubleSolenoid::kReverse:
 			//Probably not, so do nothing cause something coule be bad.  Like really bad.
+			should_exit = TRUE;
 			break;
 		default:
 			break;
@@ -32,14 +36,14 @@ void cmdPullBackWinch::Execute() {
 // Make this return true when this Command no longer needs to run execute()
 bool cmdPullBackWinch::IsFinished() {
 	//Keep it going until the loader is in position
-			
-	//return true;
-	return winchSubsystem->ReadWinchRetractLimitSwitch();
+	
+	return winchSubsystem->ReadWinchRetractLimitSwitch() || should_exit;
 }
 
 // Called once after isFinished returns true
 void cmdPullBackWinch::End() {
 	winchSubsystem->RetractHold();
+	should_exit = FALSE;
 }
 
 // Called when another command which requires one or more of the same
