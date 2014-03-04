@@ -45,6 +45,8 @@ void _GLOBAL__I__ZN17cmdStopEverythingC2Ev();
 
 void _GLOBAL__I__ZN19cmdDeactivateLoaderC2Ev();
 
+void _GLOBAL__I__ZN20autocmdDriveFowardXsC2Ec();
+
 void _GLOBAL__I__ZN20cmdDriveWithJoystickC2Ev();
 
 void _GLOBAL__I__ZN21AutonomusModeSwitchesC2Ev();
@@ -135,6 +137,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN17cmdPrecisionDriveC2Ev,
     _GLOBAL__I__ZN17cmdStopEverythingC2Ev,
     _GLOBAL__I__ZN19cmdDeactivateLoaderC2Ev,
+    _GLOBAL__I__ZN20autocmdDriveFowardXsC2Ec,
     _GLOBAL__I__ZN20cmdDriveWithJoystickC2Ev,
     _GLOBAL__I__ZN21AutonomusModeSwitchesC2Ev,
     _GLOBAL__I__ZN22DriverStationLCDSystemC2Ev,
@@ -209,6 +212,8 @@ void _GLOBAL__D__ZN17cmdPrecisionDriveC2Ev();
 void _GLOBAL__D__ZN17cmdStopEverythingC2Ev();
 
 void _GLOBAL__D__ZN19cmdDeactivateLoaderC2Ev();
+
+void _GLOBAL__D__ZN20autocmdDriveFowardXsC2Ec();
 
 void _GLOBAL__D__ZN20cmdDriveWithJoystickC2Ev();
 
@@ -290,6 +295,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN17cmdPrecisionDriveC2Ev,
     _GLOBAL__D__ZN17cmdStopEverythingC2Ev,
     _GLOBAL__D__ZN19cmdDeactivateLoaderC2Ev,
+    _GLOBAL__D__ZN20autocmdDriveFowardXsC2Ec,
     _GLOBAL__D__ZN20cmdDriveWithJoystickC2Ev,
     _GLOBAL__D__ZN21AutonomusModeSwitchesC2Ev,
     _GLOBAL__D__ZN22DriverStationLCDSystemC2Ev,
