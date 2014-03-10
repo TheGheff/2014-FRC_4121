@@ -18,7 +18,7 @@ void AutonomusModeSwitches::InitDefaultCommand() {
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 int AutonomusModeSwitches::GetMode() {
-	return (((bool)switch4)<<3)+(((bool)switch3)<<2)+(((bool)switch2)<<1)+(bool)switch1;
+	return (((bool)switch4)<<3)&(((bool)switch3)<<2)&(((bool)switch2)<<1)&(bool)switch1;
 //The flaw in this program is that if the switches fet flipped during autonomous the behavior will change
 	
 	//	int mode = 0;

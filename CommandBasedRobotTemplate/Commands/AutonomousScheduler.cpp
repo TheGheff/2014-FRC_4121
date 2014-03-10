@@ -1,5 +1,8 @@
 #include "AutonomousScheduler.h"
 #include "AutoDoNothing.h"
+#include "AutoDriveXs.h"
+#include "ReleaseWinch.h"
+#include "../CommandBase.h"
 
 cmdAutonomousScheduler::cmdAutonomousScheduler() {
 	// Use requires() here to declare subsystem dependencies
@@ -12,11 +15,16 @@ void cmdAutonomousScheduler::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void cmdAutonomousScheduler::Execute() {
-	switch(autonomousModeSwitches->GetMode())
+	mode = autonomousModeSwitches->GetMode();
+	driverStationLCDSystem->testUpdate((char*)autonomousModeSwitches->GetMode());
+	switch(mode)
 	{
 	case 0:
-		autonCommand = new autocmdDoNothing();
+		autonCommand = new autocmdDriveFowardXs(40);
+		//autonCommand = new cmdReleaseWinch();
 		break;
+	case 1:
+		autonCommand = new autocmdDriveFowardXs(6);
 	default:
 		autonCommand = new autocmdDoNothing();
 		break;

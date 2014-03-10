@@ -396,7 +396,9 @@
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/CameraSubsystem.h \
   C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/AutonomusModeSwitches.h \
-  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/AutoDoNothing.h
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/AutoDoNothing.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/AutoDriveXs.h \
+  C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ReleaseWinch.h
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/AutonomousScheduler.h:
 
@@ -1189,3 +1191,7 @@ C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/CameraSu
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/../Subsystems/AutonomusModeSwitches.h:
 
 C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/AutoDoNothing.h:
+
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/AutoDriveXs.h:
+
+C:/WindRiver/workspace/CommandBasedRobotTemplate/Commands/ReleaseWinch.h:

@@ -11,6 +11,7 @@
 class cmdAutonomousScheduler: public CommandBase {
 private:
 	Command* autonCommand;
+	int mode;
 public:
 	cmdAutonomousScheduler();
 	virtual void Initialize();
