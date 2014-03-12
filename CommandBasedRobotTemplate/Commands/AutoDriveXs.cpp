@@ -1,25 +1,28 @@
 #include "AutoDriveXs.h"
-autocmdDriveFowardXs::autocmdDriveFowardXs(char driveTimeInS) {
+autocmdDriveFowardXs::autocmdDriveFowardXs(int driveTimeInS) {
 	// Use requires() here to declare subsystem dependencies
-	char driveTime = driveTimeInS;
-	SetTimeout(driveTime);
+	SetTimeout(driveTimeInS);
+	//seconds = driveTimeInS;
+	//timer = new Timer();
 }
 
 // Called just before this Command runs the first time
 void autocmdDriveFowardXs::Initialize() {
-	
-	
+	//timer->Start();
 }
 
 // Called repeatedly when this Command is scheduled to run
 void autocmdDriveFowardXs::Execute() {
-	chassis->autoDriveSystem(1,1);
+	chassis->autoDriveSystem(.6,.6);
 }
 
 // Make this return true when this Command no longer needs to run execute()
 bool autocmdDriveFowardXs::IsFinished() {
 	//printf("IsFinished\n");
-	return IsTimedOut();
+	if(IsTimedOut()/*||timer->Get()>=seconds*/){
+		return true;
+	}
+	return false;
 }
 
 // Called once after isFinished returns true

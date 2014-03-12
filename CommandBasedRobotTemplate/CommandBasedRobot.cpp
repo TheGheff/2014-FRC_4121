@@ -9,7 +9,7 @@ class CommandBasedRobot : public IterativeRobot {
 private:
 	Command *autonomousCommand;
 	Compressor *mainCompressor;
-
+	bool check;
 	
 	virtual void RobotInit() {
 		CommandBase::init();
@@ -18,10 +18,14 @@ private:
 		mainCompressor->Start();
 		CommandBase::loaderSubsystem->LowerLoader();
 		CommandBase::winchSubsystem->StopEverything();
+		check = true;
 	}
 	
+	
 	virtual void AutonomousInit() {
-		autonomousCommand->Start();
+		
+			autonomousCommand->Start();
+		
 	}
 	
 	virtual void AutonomousPeriodic() {

@@ -10,10 +10,10 @@
  */
 class autocmdDriveFowardXs: public CommandBase {
 private:
-	char driveTime;
-	
+	int seconds;
+	Timer *timer;
 public:
-	autocmdDriveFowardXs(char driveTimeInS);
+	autocmdDriveFowardXs(int driveTimeInS);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
