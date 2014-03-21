@@ -8,12 +8,12 @@
  *
  * @author Vaughn
  */
-class autocmdDriveFowardXs: public CommandBase {
+class autocmdDriveXs: public CommandBase {
 private:
-	char driveTime;
-	
+	int driveTime;
+	//bool isForward;
 public:
-	autocmdDriveFowardXs(char driveTimeInS);
+	autocmdDriveXs(int driveTimeInS/*, bool direction*/);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

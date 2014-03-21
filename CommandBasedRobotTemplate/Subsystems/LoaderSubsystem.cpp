@@ -13,7 +13,7 @@ void LoaderSubsystem::InitDefaultCommand() {
 }
 
 void LoaderSubsystem::RunLoader() {
-		feederMotor->Set(-.9, 0);
+		feederMotor->Set(-.8, 0);
 }
 
 void LoaderSubsystem::Eject(){

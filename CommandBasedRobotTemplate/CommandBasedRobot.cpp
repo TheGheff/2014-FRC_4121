@@ -9,7 +9,6 @@ class CommandBasedRobot : public IterativeRobot {
 private:
 	Command *autonomousCommand;
 	Compressor *mainCompressor;
-
 	
 	virtual void RobotInit() {
 		CommandBase::init();
@@ -17,10 +16,12 @@ private:
 		autonomousCommand = new cmdAutonomousScheduler();	//DEFINE COMMANDS HERE
 		mainCompressor->Start();
 		CommandBase::loaderSubsystem->LowerLoader();
-		CommandBase::winchSubsystem->StopEverything();
+		CommandBase::winchSubsystem->Retract();
 	}
 	
 	virtual void AutonomousInit() {
+		//addSequential(new cmdAutonomousScheduler);
+		//addSequential(new cmdAutonomousSchedulerReverse);
 		autonomousCommand->Start();
 	}
 	

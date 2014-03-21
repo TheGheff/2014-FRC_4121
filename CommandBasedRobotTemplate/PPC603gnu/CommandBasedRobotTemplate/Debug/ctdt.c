@@ -19,6 +19,8 @@ void _GLOBAL__I__ZN14RelaySubsystemC2Ec();
 
 void _GLOBAL__I__ZN14WinchSubsystemC2Ev();
 
+void _GLOBAL__I__ZN14autocmdDriveXsC2Ei();
+
 void _GLOBAL__I__ZN14cmdEjectLoaderC2Ev();
 
 void _GLOBAL__I__ZN14cmdToggleDriveC2Ev();
@@ -45,8 +47,6 @@ void _GLOBAL__I__ZN17cmdStopEverythingC2Ev();
 
 void _GLOBAL__I__ZN19cmdDeactivateLoaderC2Ev();
 
-void _GLOBAL__I__ZN20autocmdDriveFowardXsC2Ec();
-
 void _GLOBAL__I__ZN20cmdDriveWithJoystickC2Ev();
 
 void _GLOBAL__I__ZN21AutonomusModeSwitchesC2Ev();
@@ -58,6 +58,8 @@ void _GLOBAL__I__ZN22cmdAutonomousSchedulerC2Ev();
 void _GLOBAL__I__ZN22cmdExtendLoaderCommandC2Ev();
 
 void _GLOBAL__I__ZN23cmdRetractLoaderCommandC2Ev();
+
+void _GLOBAL__I__ZN29cmdAutonomousSchedulerReverseC2Ev();
 
 void _GLOBAL__I__ZN2OIC2Ev();
 
@@ -124,6 +126,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN12cmdHoldWinchC2Ev,
     _GLOBAL__I__ZN14RelaySubsystemC2Ec,
     _GLOBAL__I__ZN14WinchSubsystemC2Ev,
+    _GLOBAL__I__ZN14autocmdDriveXsC2Ei,
     _GLOBAL__I__ZN14cmdEjectLoaderC2Ev,
     _GLOBAL__I__ZN14cmdToggleDriveC2Ev,
     _GLOBAL__I__ZN15LoaderSubsystemC2Ev,
@@ -137,13 +140,13 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN17cmdPrecisionDriveC2Ev,
     _GLOBAL__I__ZN17cmdStopEverythingC2Ev,
     _GLOBAL__I__ZN19cmdDeactivateLoaderC2Ev,
-    _GLOBAL__I__ZN20autocmdDriveFowardXsC2Ec,
     _GLOBAL__I__ZN20cmdDriveWithJoystickC2Ev,
     _GLOBAL__I__ZN21AutonomusModeSwitchesC2Ev,
     _GLOBAL__I__ZN22DriverStationLCDSystemC2Ev,
     _GLOBAL__I__ZN22cmdAutonomousSchedulerC2Ev,
     _GLOBAL__I__ZN22cmdExtendLoaderCommandC2Ev,
     _GLOBAL__I__ZN23cmdRetractLoaderCommandC2Ev,
+    _GLOBAL__I__ZN29cmdAutonomousSchedulerReverseC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
     _GLOBAL__I__ZN7ChassisC2Ev,
     _GLOBAL__I__ZN12PrintCommandC2EPKc,
@@ -187,6 +190,8 @@ void _GLOBAL__D__ZN14RelaySubsystemC2Ec();
 
 void _GLOBAL__D__ZN14WinchSubsystemC2Ev();
 
+void _GLOBAL__D__ZN14autocmdDriveXsC2Ei();
+
 void _GLOBAL__D__ZN14cmdEjectLoaderC2Ev();
 
 void _GLOBAL__D__ZN14cmdToggleDriveC2Ev();
@@ -213,8 +218,6 @@ void _GLOBAL__D__ZN17cmdStopEverythingC2Ev();
 
 void _GLOBAL__D__ZN19cmdDeactivateLoaderC2Ev();
 
-void _GLOBAL__D__ZN20autocmdDriveFowardXsC2Ec();
-
 void _GLOBAL__D__ZN20cmdDriveWithJoystickC2Ev();
 
 void _GLOBAL__D__ZN21AutonomusModeSwitchesC2Ev();
@@ -226,6 +229,8 @@ void _GLOBAL__D__ZN22cmdAutonomousSchedulerC2Ev();
 void _GLOBAL__D__ZN22cmdExtendLoaderCommandC2Ev();
 
 void _GLOBAL__D__ZN23cmdRetractLoaderCommandC2Ev();
+
+void _GLOBAL__D__ZN29cmdAutonomousSchedulerReverseC2Ev();
 
 void _GLOBAL__D__ZN2OIC2Ev();
 
@@ -282,6 +287,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN12cmdHoldWinchC2Ev,
     _GLOBAL__D__ZN14RelaySubsystemC2Ec,
     _GLOBAL__D__ZN14WinchSubsystemC2Ev,
+    _GLOBAL__D__ZN14autocmdDriveXsC2Ei,
     _GLOBAL__D__ZN14cmdEjectLoaderC2Ev,
     _GLOBAL__D__ZN14cmdToggleDriveC2Ev,
     _GLOBAL__D__ZN15LoaderSubsystemC2Ev,
@@ -295,13 +301,13 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN17cmdPrecisionDriveC2Ev,
     _GLOBAL__D__ZN17cmdStopEverythingC2Ev,
     _GLOBAL__D__ZN19cmdDeactivateLoaderC2Ev,
-    _GLOBAL__D__ZN20autocmdDriveFowardXsC2Ec,
     _GLOBAL__D__ZN20cmdDriveWithJoystickC2Ev,
     _GLOBAL__D__ZN21AutonomusModeSwitchesC2Ev,
     _GLOBAL__D__ZN22DriverStationLCDSystemC2Ev,
     _GLOBAL__D__ZN22cmdAutonomousSchedulerC2Ev,
     _GLOBAL__D__ZN22cmdExtendLoaderCommandC2Ev,
     _GLOBAL__D__ZN23cmdRetractLoaderCommandC2Ev,
+    _GLOBAL__D__ZN29cmdAutonomousSchedulerReverseC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,
     _GLOBAL__D__ZN7ChassisC2Ev,
     _GLOBAL__D__ZN9Scheduler9_instanceE,
